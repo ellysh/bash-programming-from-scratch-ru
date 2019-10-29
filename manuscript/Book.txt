@@ -1,0 +1,9 @@
+mainmatter:
+
+  foreword.md
+
+  GeneralInformation/README.md
+  GeneralInformation/operating-system.md
+  GeneralInformation/application.md
+
+  Bash/README.md
