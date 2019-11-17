@@ -9,3 +9,5 @@ mainmatter:
   Bash/README.md
   Bash/tools.md
   Bash/command-line-interface.md
+
+  answers.md
