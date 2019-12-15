@@ -58,4 +58,27 @@ find / -name "*.txt" -exec wc -l {} +
 ```
 Помните сообщение об ошибке, которое выводится при запуске `find` в корневом каталоге? Текст этого сообщения будет передаваться в команду `wc`. Дальше команда будет интерпретировать каждое слово в качестве пути до файла. Очевидно, что эти пути окажутся недействительными и `wc` завершится с ошибкой. Поэтому запускать `find` надо в каталоге `/usr`, поскольку все TXT файлы находятся именно в нём.
 
+##### Упражнение 2-4. Использование команды `grep`
 
+Информацию о лицензии приложений логичнее будет искать в системном каталоге с документацией `/usr/share/doc`.
+
+Для поиска приложений с лицензией [GNU General Public License](https://ru.wikipedia.org/wiki/GNU_General_Public_License) воспользуемся строкой "General Public License":
+{line-numbers: false}
+```
+grep -Rl "General Public License" /usr/share/doc
+```
+
+Также имеет смысл поискать в каталоге `/usr/share/licenses`:
+{line-numbers: false}
+```
+grep -Rl "General Public License" /usr/share/licenses
+```
+
+В окружении MSYS2 есть два неспецифичных для UNIX каталога установки `/mingw32` и `/mingw64`. Можно проверить и установленные в них программы:
+{line-numbers: false}
+```
+grep -Rl "General Public License" /mingw32/share/doc
+grep -Rl "General Public License" /mingw64/share
+```
+
+В случае лицензии MIT можно искать строку "MIT license" в тех же каталогах. Для Apache лицензии подойдёт строка "Apache license", а для BSD - "BSD license".
