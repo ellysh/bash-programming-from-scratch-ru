@@ -6,9 +6,9 @@ mainmatter:
   GeneralInformation/operating-system.md
   GeneralInformation/application.md
 
-  Bash/README.md
-  Bash/tools.md
-  Bash/command-line-interface.md
+  BashCLI/README.md
+  BashCLI/tools.md
+  BashCLI/command-line-interface.md
 
   links.md
   answers.md
