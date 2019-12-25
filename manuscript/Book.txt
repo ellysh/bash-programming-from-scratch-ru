@@ -6,9 +6,16 @@ mainmatter:
   GeneralInformation/operating-system.md
   GeneralInformation/application.md
 
-  BashCLI/README.md
-  BashCLI/tools.md
-  BashCLI/command-line-interface.md
+  BashShell/README.md
+  BashShell/tools.md
+  BashShell/command-line-interface.md
+  BashShell/file-system.md
+  BashShell/commands-info.md
+  BashShell/files-and-directories.md
+  BashShell/extra-features.md
+
+  BashScripting/README.md
+  BashScripting/tools.md
 
   links.md
   answers.md
