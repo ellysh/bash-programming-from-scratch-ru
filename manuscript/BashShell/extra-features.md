@@ -200,7 +200,7 @@ cp /usr/share/doc/bash/bashref.html /home/ilya.shpigor
 | `xargs` | Формирование параметров команды по тексту из стандартного потока ввода. | `ls | xargs cp -t ~`  |
 |  | | |
 | `grep` | Поиск по указанному шаблону. | `ls | grep txt` |
-| | `info ls | grep -A 3 -B 3 GNU` |
+| | | `info ls | grep -A 3 -B 3 GNU` |
 |  | | |
 | `tee` | Перенаправление потока ввода одновременно в поток вывода и в файл. | `ls | tee result.txt` |
 |  | | |
