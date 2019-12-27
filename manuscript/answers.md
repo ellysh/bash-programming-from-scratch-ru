@@ -132,7 +132,7 @@ find /d/Photo -type f -newermt 2020-01-01 ! -newermt 2020-02-01 -exec mv {} ~/ph
 
 Обратите внимание на масштабируемость такого решения. Независимо от того сколько файлов находится в каталоге `D:\Photo`, чтобы разделить их по месяцам нужно всего три команды.
 
-##### Упражнение 2-7. Использование конвейеров и перенаправления потоков ввода-выводаcd
+##### Упражнение 2-7. Использование конвейеров и перенаправления потоков ввода-вывода
 
 Прежде всего разберёмся, как работает утилита `bsdtar`. Согласно её выводу `--help`, чтобы создать [архив](https://ru.wikipedia.org/wiki/Архив_(информатика)) каталога необходимо передать параметры `-cf` и имя файла архива. Например:
 {line-numbers: false}
@@ -179,3 +179,71 @@ I> Учтите, что сжатие - это значительно более 
 ```
 find ~/photo -type d -path */2019/* -o -path */2020/* | xargs -I% bsdtar --strip-components=3 -cjf %.tar.bz2 %
 ```
+
+##### Упражнение 2-8. Использование коннекторов
+
+Будем реализовывать наш алгоритм последовательно шаг за шагом. Первое действие - копирование файла README в домашний каталог пользователя:
+{line-numbers: false}
+```
+cp /usr/share/doc/bash/README ~
+```
+
+Чтобы вывести результат этой команды в лог-файл, воспользуемся коннектором `&&`:
+{line-numbers: false}
+```
+cp /usr/share/doc/bash/README ~ && echo "cp - OK" > result.log
+```
+
+Далее необходимо заархивировать скопированный файл. Для этого воспользуемся утилитой `bsdtar` или `tar`:
+{line-numbers: false}
+```
+bsdtar -cjf ~/README.tar.bz2 ~/README
+```
+
+Выведем её результат аналогично с использованием коннектора `&&` и команды `echo`:
+{line-numbers: false}
+```
+bsdtar -cjf ~/README.tar.bz2 ~/README && echo "bsdtar - OK" >> result.log
+```
+
+Обратите внимание, что в данном случае `echo` дописывает в конец уже существующего лог-файла.
+
+Как объединить получившиеся вызовы `cp` и `bsdtar`? `bsdtar` должен отработать только в случае успешного выполнения копирования. Значит надо опять же воспользоваться коннектором `&&`. В результате получим следующую команду:
+{line-numbers: false}
+```
+cp /usr/share/doc/bash/README ~ && echo "cp - OK" > result.log && bsdtar -cjf ~/README.tar.bz2 ~/README && echo "bsdtar - OK" >> result.log
+```
+
+Добавим к ней последнее действие - удаление файла `README`:
+{line-numbers: false}
+```
+cp /usr/share/doc/bash/README ~ && echo "cp - OK" > ~/result.log && bsdtar -cjf ~/README.tar.bz2 ~/README && echo "bsdtar - OK" >> ~/result.log && rm ~/README && echo "rm - OK" >> ~/result.log
+```
+
+Если вы запустите эту команду и все действия выполнятся корректно, вы получите следующий вывод в файле `result.txt`:
+{line-numbers: false}
+```
+cp - OK
+bsdtar - OK
+rm - OK
+```
+
+Согласитесь, что читать получившуюся команду неудобно. Есть несколько вариантов переноса строк. Bash разрешает перенос строки сразу после коннекторов:
+{line-numbers: false}
+```
+cp /usr/share/doc/bash/README ~ && echo "cp - OK" > ~/result.log &&
+bsdtar -cjf ~/README.tar.bz2 ~/README && echo "bsdtar - OK" >> ~/result.log &&
+rm ~/README && echo "rm - OK" >> ~/result.log
+```
+
+Попробуйте скопировать эту команду в окно терминала и исполнить. Она должна отработать без ошибок.
+
+Если в вашей команде нет коннекторов, вы можете воспользоваться символом обратный слэш `\`:
+{line-numbers: false}
+```
+cp /usr/share/doc/bash/README ~ && echo "cp - OK" > ~/result.log \
+&& bsdtar -cjf ~/README.tar.bz2 ~/README && echo "bsdtar - OK" >> ~/result.log \
+&& rm ~/README && echo "rm - OK" >> ~/result.log
+```
+
+Его вы можете вставлять в любое место команды. Важно, чтобы сразу после обратного слэш шёл перевод строки.
