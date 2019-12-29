@@ -343,21 +343,10 @@ pwd -W
 
 3. В редакторе Notepad++ откройте файл `.bash_profile` из этого каталога.
 
-4. Найдите следующий код на строке 23:
-{number-from: "23"}
+4. В конец файла добавьте следующую строку:
+{line-numbers: false}
 ```
-# Set PATH so it includes user's private bin if it exists
-# if [ -d "${HOME}/bin" ] ; then
-#   PATH="${HOME}/bin:${PATH}"
-# fi
-```
-В начале строк 24, 25 и 26 удалите символ `#`, который означает закомментированный код. Также в строке 25 замените путь `${HOME}/bin` на нужный нам `/opt/firefox/bin`. После редактирования должно получиться следующее:
-{number-from: "23"}
-```
-# Set PATH so it includes user's private bin if it exists
-if [ -d "${HOME}/bin" ] ; then
-    PATH="/opt/firefox/bin:${PATH}"
-fi
+PATH="/opt/firefox/bin:${PATH}"
 ```
 
 Чтобы изменения вступили в силу, вам нужно перезапустить терминал MSYS2. Теперь если вы наберёте команду `firefox`, Bash найдёт соответствующий исполняемый файл по пути `/opt/firefox/bin` и запустит.
