@@ -46,7 +46,7 @@ C:\Program Files (86)\Notepad++
 ![Результат запуска Notepad++](images/BashScripting/notepad-error.png)
 
 В чём причина ошибки? На самом деле в этой команде есть несколько проблем. Рассмотрим их по порядку. Для начала попробуем выполнить следующую команду `cd`:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 cd /c/Program Files
 ```
@@ -60,13 +60,13 @@ Bash сообщает нам о том, что в команду было пер
 
 Есть два способа избежать подобной ошибки:
 
-1. Заключить всю строку в двойные кавычки: {line-numbers: false}
+1. Заключить всю строку в двойные кавычки: {line-numbers: false, format: Bash}
 ```
 cd "/c/Program Files"
 ```
 
 2. Экранировать все пробелы с помощью обратного слэша:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 cd /c/Program\ Files
 ```
@@ -74,13 +74,13 @@ cd /c/Program\ Files
 Если выполнить каждую из этих команд, они отработают корректно.
 
 Теперь попробуем перейти по пути `/c/Program Files (x86)`:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 cd /c/Program Files (x86)
 ```
 
 Как мы выяснили, Bash обрабатывает пробелы по своему усмотрению. Поэтому выполним их экранирование:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 cd /c/Program\ Files\ (x86)
 ```
@@ -91,38 +91,38 @@ cd /c/Program\ Files\ (x86)
 ![Результат cd](images/BashScripting/cd-unexpected-token.png)
 
 Эту же ошибку мы получили при запуске Notepad++ (см. иллюстрацию 3-1). Проблема заключается в том, что кавычки `(` и `)` являются частью синтаксиса Bash. Поэтому он пытается их интерпретировать. Мы уже сталкивались с этой проблемой, когда группировали выражения команды `find`. Для её решения опять же подойдёт экранирование или двойные кавычки:
-{line-numbers: false}
+{line-numbers: true, format: Bash}
 ```
  cd /c/Program\ Files\ \(x86\)
  cd "/c/Program Files (x86)"
 ```
 
 Таким образом, чтобы запустить Notepad++ по абсолютному пути, надо выполнить:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 "/c/Program Files (x86)/Notepad++/notepad++.exe"
 ```
 
 Если вы хотите запускать редактор Notepad++ по имени исполняемого файла, достаточно добавить его путь установки в переменную `PATH`. Для этого в конец файла `~/.bash_profile` добавьте следующую строку:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 PATH="/c/Program Files (x86)/Notepad++:${PATH}"
 ```
 
 Перезапустите терминал MSYS2. Теперь вы можете вызывать Notepad++ по следующей команде:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 notepad++.exe
 ```
 
 Вместо редактирования переменной `PATH` можно воспользоваться командой `alias`. В общем случае она осуществляет подстановку строки вместо заданного слова. То есть каждый раз когда интерпретатор Bash встречает слово, он проверяет список определений `alias`. Если слово есть в этом списке, оно будет заменено на соответствующую строку. Обычно механизм `alias` используется для сокращений команд. В нашем случае мы можем назвать словом `notepad++` следующую строку:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 "/c/Program Files (x86)/Notepad++/notepad++.exe"
 ```
 
 Для этого выполните команду:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 alias notepad++="/c/Program\ Files\ \(x86\)/Notepad++/notepad++.exe"
 ```
@@ -130,7 +130,7 @@ alias notepad++="/c/Program\ Files\ \(x86\)/Notepad++/notepad++.exe"
 Теперь Bash каждый раз встретив слово `notepad++` будет запускать редактор по указанному нами абсолютному пути. Единственная проблема этого решения заключается в том, что `alias` придётся назначать каждый раз после перезапуска терминала MSYS2. Чтобы этого не делать, можно добавить эту команду в файл `~/.bashrc`. Bash исполняет этот файл каждый раз перед запуском терминала.
 
 После интеграции Notepad++ в Bash, вы можете открывать файлы на редактирование из командной строки. Для этого просто передайте имя файла первым параметром:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 notepad++ test.txt
 ```
@@ -140,13 +140,13 @@ notepad++ test.txt
 После запуска Notepad++ из командной строки вы не сможете вводить Bash команды. Окно терминала будет использоваться редактором для вывода stdout. Только после завершения Notepad++, интерпретатор Bash будет работать в обычном режиме.
 
 Чтобы использовать окно терминала дальше, можно запустить приложение в фоновом режиме (background). Для этого поставьте амперсанд `&` в конце команды:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 notepad++ test.txt &
 ```
 
 В результате окно терминала по-прежнему будет использоваться для вывода stdout редактора, но вы сможете вводить Bash команды. Если вы хотите полностью разделить окно терминал и запущенное приложение, воспользуйтесь командой `disown`:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 disown -a
 ```
@@ -154,13 +154,13 @@ disown -a
 В результате вывод Notepad++ в окно терминала прекратится. Также при закрытии терминала, редактор продолжит свою работу.
 
 Команды запуска Notepad++ и `disown` можно объединить в одну:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 notepad++ test.txt & disown -a
 ```
 
 I> Параметр `-a` команды `disown` отделяет все приложения запущенные в фоновом режиме. Вы можете воспользоваться переменной окружения Bash с именем `!`, чтобы отделить только последнюю запущенную программу. Переменная хранит её идентификатор, известный как [PID](https://ru.wikipedia.org/wiki/Идентификатор_процесса). В этом случае команда запуска Notepad++ будет выглядеть так:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 notepad++ test.txt & disown $!
 ```

@@ -7,7 +7,7 @@
 ### Команда для резервного копирования
 
 Напишем команду для резервного копирования фотографий на [внешний жёсткий диск](https://ru.wikipedia.org/wiki/Внешний_жёсткий_диск). Она будет состоять всего из двух действий: архивирования и копирования. Предположим, что фотографии хранятся в каталоге `~/photo`, а `/d` - это точка монтирования внешнего диска. Тогда команда может выглядеть следующим образом:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 bsdtar -cjf ~/photo.tar.bz2 ~/photo && cp -f ~/photo.tar.bz2 /d
 ```
@@ -15,20 +15,20 @@ bsdtar -cjf ~/photo.tar.bz2 ~/photo && cp -f ~/photo.tar.bz2 /d
 Копирование выполняется только в случае успешного архивирования.
 
 Для проверки корректности добавим вывод результатов каждой операции в лог-файл. Мы уже знаем, как это сделать для команд по отдельности с помощью вызова `echo`, коннекторов `&&` и `||`:
-{line-numbers: false}
+{line-numbers: true, format: Bash}
 ```
 bsdtar -cjf ~/photo.tar.bz2 ~/photo && echo "bsdtar - OK" > results.txt || echo "bsdtar - FAILS" > results.txt
 cp -f ~/photo.tar.bz2 /d && echo "cp - OK" >> results.txt || echo "cp - FAILS" >> results.txt
 ```
 
 Вопрос в том, как нам объединить эти две команды в одну? Попробуем прямолинейное решение с коннектором `&&` между ними:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 bsdtar -cjf ~/photo.tar.bz2 ~/photo && echo "bsdtar - OK" > results.txt || echo "bsdtar - FAILS" > results.txt && cp -f ~/photo.tar.bz2 /d && echo "cp - OK" >> results.txt || echo "cp - FAILS" >> results.txt
 ```
 
 Что будет делать эта команда? Для простоты рассмотрения перепишем её в виде логического выражения, заменив каждый вызов на буквы латинского алфавита:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 B && O1 || F1 && C && O2 || F2
 ```
@@ -50,7 +50,7 @@ B && O1 || F1 && C && O2 || F2
 4. O2 или F2
 
 Очевидно, что операция копирования не имеет смысла, если архивирование завершилось с ошибкой. Ситуация усугубляется тем, что `bsdtar` создаёт пустой архив, если целевого каталога или файла не существует. В этом случае `cp` успешно скопирует его и запишет в лог-файл "cp - OK". В результате `results.txt` будет выглядеть следующим образом:
-{line-numbers: false}
+{line-numbers: true}
 ```
 tar - FAILS
 cp - OK
@@ -71,7 +71,7 @@ B && O1 || ! F1 && C && O2 || F2
 ```
 
 В результате выполнения этой команды в лог файл будет выведено:
-{line-numbers: false}
+{line-numbers: true}
 ```
 tar - FAILS
 cp - FAILS
@@ -92,7 +92,7 @@ cp - FAILS
 ```
 
 Если вернёмся к реальному коду на Bash, наша команда станет выглядеть так:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 (bsdtar -cjf ~/photo.tar.bz2 ~/photo && echo "bsdtar - OK" > results.txt || ! echo "bsdtar - FAILS" > results.txt) && (cp -f ~/photo.tar.bz2 /d && echo "cp - OK" >> results.txt || ! echo "cp - FAILS" >> results.txt)
 ```
@@ -135,13 +135,13 @@ cp - FAILS
 Сделаем скрипт на основе нашей команды для резервного копирования. Для этого выполните следующие действия:
 
 1. Откройте редактор исходного кода и создайте в нём новый файл. Для Notepad++, интегрированного с Bash, команда запуска может выглядеть следующим образом:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 notepad++ ~/photo-backup.sh
 ```
 
 2. Скопируйте в файл команду резервного копирования:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 (bsdtar -cjf ~/photo.tar.bz2 ~/photo && echo "bsdtar - OK" > results.txt || ! echo "bsdtar - FAILS" > results.txt) && (cp -f ~/photo.tar.bz2 /d && echo "cp - OK" >> results.txt || ! echo "cp - FAILS" >> results.txt)
 ```
@@ -149,7 +149,7 @@ notepad++ ~/photo-backup.sh
 3. Сохраните измененный файл и закройте редактор.
 
 В результате мы получили файл скрипта `photo-backup.sh` в домашнем каталоге пользователя. Чтобы его исполнить, запустите интерпретатор командой `bash` и передайте имя файла первым параметром:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 bash photo-backup.sh
 ```
@@ -159,13 +159,13 @@ bash photo-backup.sh
 Запуск скриптов с явным вызовом интерпретатора Bash неудобен. Можем ли мы запустить нашу программу так же, как и любую другую GNU утилиту по относительному или абсолютному пути? Можем, но для этого нам потребуется несколько действий:
 
 1. В окне терминала выполните следующую команду:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 chmod +x ~/photo-backup.sh
 ```
 
 2. Откройте файл скрипта для редактирования и добавьте в его начало следующую строку:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 #!/bin/bash
 ```
@@ -189,12 +189,12 @@ chmod +x ~/photo-backup.sh
 После этого шага, вы уже можете запустить файл и Bash будет интерпретировать его команды. Однако, возможна ситуация, когда вы используйте другой командный интерпретатор (например, [C shell](https://ru.wikipedia.org/wiki/Csh)). В этом случае скрипт будет исполняться им и завершится ошибкой. Чтобы явно указать интерпретатор, который должен выполнять скрипт, надо в начале файла ввести его абсолютный путь после символов `#!`. Теперь ваша программа может запущена на любой системе, имеющей Bash.
 
 I> Если в скрипте не указан интерпретатор для запуска, то утилита `file` определит его как обычный текстовый файл:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 ~/photo-backup.sh: ASCII text
 ```
 После добавления строки `#!`, он же определяется как Bash скрипт:
-{line-numbers: false}
+{line-numbers: false, format: Bash}
 ```
 ~/photo-backup.sh: Bourne-Again shell script, ASCII text executable
 ```
@@ -247,4 +247,4 @@ bsdtar -cjf ~/photo.tar.bz2 ~/photo && echo "bsdtar - OK" > results.txt || ! ech
 cp -f ~/photo.tar.bz2 /d && echo "cp - OK" >> results.txt || ! echo "cp - FAILS" >> results.txt
 ```
 
-Команда `set` меняет режим работы интерпретатора. Параметр `-e` означает выход из скрипта при первой возникшей ошибке. Таким образом не меняя вызов `bsdtar` мы добились нужного нам поведения.
+Команда `set` меняет режим работы интерпретатора. Параметр `-e` означает выход из скрипта при первой возникшей ошибке. Таким образом не меняя вызов `bsdtar`, мы добились нужного нам поведения.
