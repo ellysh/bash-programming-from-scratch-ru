@@ -12,6 +12,8 @@
 
 * [Wiki ресурс](https://wiki.bash-hackers.org) по использованию Bash.
 
+* [Руководство по Bash](http://mywiki.wooledge.org/BashGuide).
+
 ## Unix
 
 * Книга Эрика Реймонда ["Искусство программирования в Unix"](https://ru.wikipedia.org/wiki/Философия_Unix#Реймонд:_Искусство_программирования_в_Unix).
