@@ -8,11 +8,15 @@
 
 * [Шпаргалка по Bash командам](https://tproger.ru/translations/bash-cheatsheet).
 
+* [Подводные камни Bash](https://habr.com/ru/company/mailru/blog/311762/) (перевод).
+
 ### На английском языке
 
 * [Wiki ресурс](https://wiki.bash-hackers.org) по использованию Bash.
 
 * [Руководство по Bash](http://mywiki.wooledge.org/BashGuide).
+
+* [Подводные камни Bash](http://mywiki.wooledge.org/BashPitfalls) (оригинал).
 
 ## Unix
 
