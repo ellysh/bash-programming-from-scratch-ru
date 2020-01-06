@@ -16,7 +16,7 @@
 
 * [Руководство по Bash](http://mywiki.wooledge.org/BashGuide).
 
-* [Подводные камни Bash](http://mywiki.wooledge.org/BashPitfalls) (оригинал).
+* [Подводные камни Bash](http://mywiki.wooledge.org/BashPitfalls).
 
 ## Unix
 
