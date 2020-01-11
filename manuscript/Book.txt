@@ -17,6 +17,7 @@ mainmatter:
   BashScripting/README.md
   BashScripting/tools.md
   BashScripting/scripts-features.md
+  BashScripting/conditional-statement.md
 
   links.md
   answers.md
