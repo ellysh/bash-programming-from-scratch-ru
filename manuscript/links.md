@@ -18,6 +18,8 @@
 
 * [Подводные камни Bash](http://mywiki.wooledge.org/BashPitfalls).
 
+* [Регулярные выражения в `grep`](https://www.cyberciti.biz/faq/grep-regular-expressions).
+
 ## Unix
 
 * Книга Эрика Реймонда ["Искусство программирования в Unix"](https://ru.wikipedia.org/wiki/Философия_Unix#Реймонд:_Искусство_программирования_в_Unix).
