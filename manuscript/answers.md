@@ -254,3 +254,51 @@ cp /usr/share/doc/bash/README ~ && echo "cp - OK" > ~/result.log \
 ```
 
 Обратный слэш вы можете вставлять в любое место команды. Важно, чтобы сразу после него шёл перевод строки.
+
+## Разработка Bash скриптов
+
+##### Упражнение 3-1. Использование оператора if
+
+Исходная команда выглядит следующих образом:
+{line-numbers: false, format: Bash}
+```
+( grep -Rl "123" target | xargs cp -t . && echo "cp - OK" || ! echo "cp - FAILS" ) && ( grep -RL "123" target | xargs rm && echo "rm - OK" || echo "rm - FAILS" )
+```
+
+Обратите внимание на отрицание вывода "cp - FAILS". Если бы не оно, мы могли бы разбить команду на два отдельных вызова. Но в данном случае выполнение прервётся, если первый `grep` не найдёт ни одного файла и команда `cp` не сможет отработать корректно. Поэтому, нам нужен вложенный `if-else` следующего вида:
+{line-numbers: true, format: Bash}
+```
+if grep -Rl "123" target | xargs cp -t .
+then
+  echo "cp - OK"
+  if grep -RL "123" target | xargs rm
+  then
+    echo "rm - OK"
+  else
+    echo "rm - FAILS"
+  fi
+else
+  echo "cp - FAILS"
+fi
+```
+
+Если применить технику раннего возврата, мы получим следующее:
+{line-numbers: true, format: Bash}
+```
+if ! grep -Rl "123" target | xargs cp -t .
+then
+  echo "cp - FAILS"
+  exit 1
+fi
+
+echo "cp - OK"
+
+if grep -RL "123" target | xargs rm
+then
+  echo "rm - OK"
+else
+  echo "rm - FAILS"
+fi
+```
+
+Благодаря отрицанию `!` результата работы первого `grep` и следующего далее в конвейере `cp`, мы можем завершить скрипт сразу же после ошибки.
