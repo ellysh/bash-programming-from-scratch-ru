@@ -21,4 +21,5 @@ mainmatter:
   BashScripting/conditional-statement.md
 
   links.md
+  glossary.md
   answers.md
