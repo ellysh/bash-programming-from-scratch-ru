@@ -2,7 +2,7 @@
 
 ## Параметры и переменные
 
-* [**Argument**](http://linuxcommand.org/lc3_wss0120.php) (аргумент) - слово или строка, которые передаются в программу при её вызове из командного интерпретатора. Пример аргмента:
+* [**Argument**](http://linuxcommand.org/lc3_wss0120.php) (аргумент) - слово или строка, которые передаются в программу при её вызове из командного интерпретатора. Пример аргумента:
 {line-numbers: false, format: Bash}
 ```
 cat file.txt
@@ -16,7 +16,7 @@ ls -la
 
 * [**Parameter**](http://mywiki.wooledge.org/BashGuide/Parameters) (параметр) - именованная область памяти, которая используется для хранения и извлечения информации.
 
-* [**Variable**](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html#Shell-Parameters) (переменная) - параметр, указанный по имени. Переменные задаются пользователем. Пример объявления перменной:
+* [**Variable**](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html#Shell-Parameters) (переменная) - параметр, указанный по имени. Переменные задаются пользователем. Пример объявления переменной:
 {line-numbers: false, format: Bash}
 ```
 FILENAME="README.txt"
