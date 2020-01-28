@@ -18,6 +18,9 @@
 
 * Книга Mendel Cooper ["Advanced Bash-Scripting Guide"](http://tldp.org/LDP/abs/html)
 
+* [Bash Reference Manual](
+https://www.gnu.org/software/bash/manual/html_node/index.html#SEC_Contents)
+
 * [Wiki ресурс](https://wiki.bash-hackers.org) по использованию Bash.
 
 * [Руководство по Bash](http://mywiki.wooledge.org/BashGuide).
