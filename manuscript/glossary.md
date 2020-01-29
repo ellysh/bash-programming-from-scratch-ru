@@ -16,7 +16,7 @@ ls -la
 
 * [**Parameter**](http://mywiki.wooledge.org/BashGuide/Parameters) (параметр) — именованная область памяти, которая используется для хранения и извлечения информации.
 
-* [**Positional Parameters**](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html#Shell-Parameters) (позиционные параметры) — параметры, хранящие ключи и аргументы командной строки, которые были переданы Bash скрипту при вызове. Имеют строго определённый порядок, который соответствует порядку ключей и аргументов при вызове. Пример позиционного параметра:
+* [**Positional parameters**](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html#Shell-Parameters) (позиционные параметры) — параметры, хранящие ключи и аргументы командной строки, которые были переданы Bash скрипту при вызове. Имеют строго определённый порядок, который соответствует порядку ключей и аргументов при вызове. Пример позиционного параметра:
 {line-numbers: false, format: Bash}
 ```
 cp "$1" ~
@@ -38,20 +38,41 @@ FILENAME="README.txt"
 
 ## Подстановки интерпретатора
 
-* [**Brace Expansion**](http://mywiki.wooledge.org/BraceExpansion) (подстановка фигурных скобок) — генерация слов из заданных частей. Является функцией Bash и отсутствует в стандарте POSIX. Следующие две команды эквивалентны:
+* [**Brace expansion**](http://mywiki.wooledge.org/BraceExpansion) (подстановка фигурных скобок) — генерация слов из заданных частей. Является функцией Bash и отсутствует в стандарте POSIX. Следующие две команды эквивалентны:
 {line-numbers: true, format: Bash}
 ```
 cp test.{txt,md,log} Documents
 cp test.txt test.md test.log Documents
 ```
 
-* [**Tilde Expansion**](https://www.gnu.org/software/bash/manual/html_node/Tilde-Expansion.html#Tilde-Expansion) (подстановка тильды) — подстановка вместо символа тильда `~` домашнего каталога пользователя из переменной интерпретатора с именем `HOME`.
+* [**Tilde expansion**](https://www.gnu.org/software/bash/manual/html_node/Tilde-Expansion.html#Tilde-Expansion) (подстановка тильды) — подстановка вместо символа тильда `~` домашнего каталога пользователя из переменной интерпретатора с именем `HOME`.
+
+* [**Parameter expansion**](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html#Shell-Parameter-Expansion) (подстановка параметра) — подстановка вместо имени параметра его значения. Примеры:
+{line-numbers: false, format: Bash}
+```
+echo "$PATH"
+echo "${var:-empty}"
+```
+
+* [**Command substitution**](https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html#Command-Substitution) (подстановка команды) — подстановка вместо команды её вывода в stdout, полученного в результате исполнения. При этом команда исполняется в subshell. Пример:
+{line-numbers: false, format: Bash}
+```
+echo "$(date)"
+```
+
+* [**Arithmetic expansion**](https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html#Arithmetic-Expansion) (арифметическая подстановка) — вычисление арифметического выражения и подстановка его результата. Пример:
+{line-numbers: false, format: Bash}
+```
+echo $((4+3))
+```
+
+* [**Process substitution**](https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html#Process-Substitution) (подстановка процесса)  — аналог подстановки команды. В отличие от неё исполнение происходит асинхронно, а ввод и вывод команды привязаны к файлу. Содержимое этих файлов Bash перенаправляет родительскому процессу. Пример:
+{line-numbers: false, format: Bash}
+```
+diff <(sort file1.txt) <(sort file2.txt)
+```
 
 // TODO:
-• Shell Parameter Expansion:        How Bash expands variables to their values.
-• Command Substitution:     Using the output of a command as an argument.
-• Arithmetic Expansion:     How to use arithmetic in shell expansions.
-• Process Substitution:     A way to write and read to and from a command.
 • Word Splitting:       How the results of expansion are split into separate arguments.
 • Filename Expansion:       A shorthand for specifying filenames matching patterns.
 • Quote Removal:        How and when quote characters are removed from words. 
