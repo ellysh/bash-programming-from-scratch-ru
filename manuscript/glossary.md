@@ -1,5 +1,7 @@
 # Список терминов
 
+## Bash
+
 ## Параметры и переменные
 
 * [**Argument**](http://linuxcommand.org/lc3_wss0120.php) (аргумент) — слово или строка, которые передаются в программу при её вызове из командного интерпретатора. Пример аргумента:
@@ -38,6 +40,12 @@ FILENAME="README.txt"
 
 ## Подстановки интерпретатора
 
+* [**Arithmetic Expansion**](https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html#Arithmetic-Expansion) (арифметическая подстановка) — вычисление арифметического выражения и подстановка его результата. Пример:
+{line-numbers: false, format: Bash}
+```
+echo $((4+3))
+```
+
 * [**Brace Expansion**](http://mywiki.wooledge.org/BraceExpansion) (подстановка фигурных скобок) — генерация слов из заданных частей. Является функцией Bash и отсутствует в стандарте POSIX. Следующие две команды эквивалентны:
 {line-numbers: true, format: Bash}
 ```
@@ -45,37 +53,10 @@ cp test.{txt,md,log} Documents
 cp test.txt test.md test.log Documents
 ```
 
-* [**Tilde Expansion**](https://www.gnu.org/software/bash/manual/html_node/Tilde-Expansion.html#Tilde-Expansion) (подстановка тильды) — подстановка вместо символа тильда `~` домашнего каталога пользователя из переменной интерпретатора с именем `HOME`.
-
-* [**Parameter Expansion**](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html#Shell-Parameter-Expansion) (подстановка параметра) — подстановка вместо имени параметра его значения. Примеры:
-{line-numbers: false, format: Bash}
-```
-echo "$PATH"
-echo "${var:-empty}"
-```
-
 * [**Command Substitution**](https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html#Command-Substitution) (подстановка команды) — подстановка вместо команды её вывода в stdout, полученного в результате исполнения. При этом команда исполняется в subshell. Пример:
 {line-numbers: false, format: Bash}
 ```
 echo "$(date)"
-```
-
-* [**Arithmetic Expansion**](https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html#Arithmetic-Expansion) (арифметическая подстановка) — вычисление арифметического выражения и подстановка его результата. Пример:
-{line-numbers: false, format: Bash}
-```
-echo $((4+3))
-```
-
-* [**Process Substitution**](https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html#Process-Substitution) (подстановка процесса) — аналог подстановки команды. В отличие от неё исполнение происходит асинхронно, а ввод и вывод команды привязаны к файлу. Содержимое этих файлов Bash перенаправляет родительскому процессу. Пример:
-{line-numbers: false, format: Bash}
-```
-diff <(sort file1.txt) <(sort file2.txt)
-```
-
-* [**Word Splitting**](https://www.gnu.org/software/bash/manual/html_node/Word-Splitting.html#Word-Splitting) (разделение слов) — механизм разделения строки аргументов на отдельные слова. В качестве разделителя используются символы, перечисленные в переменной `$IFS`. Аргументы, заключённые в кавычки не обрабатываются. Пример:
-{line-numbers: false, format: Bash}
-```
-cp file1.txt file2.txt "my file.txt" ~
 ```
 
 * [**Filename Expansion**](https://www.gnu.org/software/bash/manual/html_node/Filename-Expansion.html#Filename-Expansion) (подстановка имён файлов) — подстановка имён файлов вместо шаблонов, содержащих символы `?`, `*` и `[`. Пример:
@@ -86,4 +67,25 @@ rm -rf *
 
 * [**Globbing**](https://mywiki.wooledge.org/glob?action=show&redirect=globbing) или glob — другое название для Filename Expansion.
 
+* [**Parameter Expansion**](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html#Shell-Parameter-Expansion) (подстановка параметра) — подстановка вместо имени параметра его значения. Примеры:
+{line-numbers: false, format: Bash}
+```
+echo "$PATH"
+echo "${var:-empty}"
+```
+
+* [**Process Substitution**](https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html#Process-Substitution) (подстановка процесса) — аналог подстановки команды. В отличие от неё исполнение происходит асинхронно, а ввод и вывод команды привязаны к файлу. Содержимое этих файлов Bash перенаправляет родительскому процессу. Пример:
+{line-numbers: false, format: Bash}
+```
+diff <(sort file1.txt) <(sort file2.txt)
+```
+
 * [**Quote Removal**](https://www.gnu.org/software/bash/manual/html_node/Quote-Removal.html#Quote-Removal) (удаление кавычек) — последняя из подстановок Bash. Заключается в удалении всех неэкранированных символов `\`, `'` и `"`, которые не были получены в результате одной из предыдущих подстановок.
+
+* [**Tilde Expansion**](https://www.gnu.org/software/bash/manual/html_node/Tilde-Expansion.html#Tilde-Expansion) (подстановка тильды) — подстановка вместо символа тильда `~` домашнего каталога пользователя из переменной интерпретатора с именем `HOME`.
+
+* [**Word Splitting**](https://www.gnu.org/software/bash/manual/html_node/Word-Splitting.html#Word-Splitting) (разделение слов) — механизм разделения строки аргументов на отдельные слова. В качестве разделителя используются символы, перечисленные в переменной `$IFS`. Аргументы, заключённые в кавычки не обрабатываются. Пример:
+{line-numbers: false, format: Bash}
+```
+cp file1.txt file2.txt "my file.txt" ~
+```
