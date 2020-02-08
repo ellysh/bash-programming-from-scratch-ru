@@ -6,7 +6,9 @@
 
 В прошлой главе мы в общих чертах изучили процесс интерпретации программ. У каждого [**скриптового языка программирования**](https://ru.wikipedia.org/wiki/Сценарный_язык) есть свой интерпретатор. Bash не исключение.
 
-Если вы используете Windows, вам понадобиться установить минимальное Unix окружение для корректной работы Bash. Есть несколько способов это сделать.
+Если вы используете Windows, вам понадобиться установить минимальное Unix-окружение для корректной работы Bash. Есть несколько способов это сделать.
+
+I> Часто под терминами "Unix-окружение" или "Linux-окружение" подразумевают программную среду, совместимую со стандартом [POSIX](https://ru.wikipedia.org/wiki/POSIX) ( Portable Operating System Interface). POSIX представляет собой набор стандартов, которые описывают интерфейсы взаимодействия прикладных программ с ОС. 
 
 Первый вариант — установить набор инструментов [**MinGW**](https://ru.wikipedia.org/wiki/MinGW#Компоненты_MinGW), который помимо интерпретатора Bash включает в себя [свободный набор компиляторов GCC](https://ru.wikipedia.org/wiki/GNU_Compiler_Collection). Из набора инструментов MinGW нам нужен компонент MSYS (Minimal SYStem). Именно он предоставляет интерпретатор Bash, эмулятор терминала и [утилиты командной строки GNU](https://ru.wikipedia.org/wiki/GNU_Coreutils). Вместе они позволяют воссоздать минимальное Unix-окружение.
 
@@ -49,7 +51,7 @@
 {caption: "Иллюстрация 2-4. Окно интерпретатора командной строки Bash", height: "20%"}
 ![Окно Bash](images/BashShell/bash-window.png)
 
-Если вы используете Windows 10, вы можете установить Unix-окружение от Microsoft под названием [Windows подсистема для Linux](https://ru.wikipedia.org/wiki/Windows_Subsystem_for_Linux) (Windows subsystem for Linux или WSL). Шаги установки описаны в [инструкции](https://docs.microsoft.com/ru-ru/windows/wsl/install-win10) на официальном сайте.
+Если вы используете Windows 10, вы можете установить Linux-окружение от Microsoft под названием [Windows подсистема для Linux](https://ru.wikipedia.org/wiki/Windows_Subsystem_for_Linux) (Windows subsystem for Linux или WSL). Шаги установки описаны в [инструкции](https://docs.microsoft.com/ru-ru/windows/wsl/install-win10) на официальном сайте.
 
 Если вы используете Linux или macOS, Bash уже предустановлен на вашу систему.
 
