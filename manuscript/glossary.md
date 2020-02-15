@@ -2,6 +2,8 @@
 
 ## A
 
+[**alias**](https://www.gnu.org/software/bash/manual/html_node/Aliases.html#Aliases) — встроенная команда Bash для сокращения команд или указания их параметров по умолчанию.
+
 [**Argument**](http://linuxcommand.org/lc3_wss0120.php) (аргумент) — слово или строка, которые передаются в программу при её вызове из командного интерпретатора. Пример аргумента:
 {line-numbers: false, format: Bash}
 ```
