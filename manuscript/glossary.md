@@ -122,7 +122,7 @@ find / -path */doc/* -name README 1> result.txt
 
 [**Shell Variable**](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html) (переменные интерпретатора) — переменные, которые устанавливаются интерпретатором. Они нужны для его корректной работы. Доступны пользователю для чтения и записи.
 
-[**Short-circuit evaluation**](https://en.wikipedia.org/wiki/Short-circuit_evaluation) (короткое замыкание) — вычисление только операндов логического оператора, достаточных для вывода значения всего выражения.
+[**Short-circuit evaluation**](https://en.wikipedia.org/wiki/Short-circuit_evaluation) (короткое замыкание) — вычисление только тех операндов логического оператора, которые достаточны для вывода значения всего выражения.
 
 [**Special Parameters**](http://mywiki.wooledge.org/BashGuide/Parameters) (специальные параметры) — параметры, устанавливаемые интерпретатором для хранения и передачи своих внутренних состояний. Доступны только для чтения. Пример специального параметра:
 {line-numbers: false, format: Bash}
