@@ -41,6 +41,12 @@ cp test.txt test.md test.log Documents
 
 **Command** (команда) — текст, введёный после приглашения командного интерпретатора. Представляет собой действие, которое интерпретатор выполняет с помощью встроенной команды или стороннего приложения. Команды также могут читаться из файла, который называется скриптом.
 
+[**Command Line Parameter**](https://stackoverflow.com/a/36495940/6562278) (параметр командной строки или параметр) — аргумент, который предоставляет информацию либо команде, либо одной из её опций. Например, путь начала поиска и имя искомого файла в вызове утилиты `find`:
+{line-numbers: false, format: Bash}
+```
+find ~/Documents -name README
+```
+
 [**Command Substitution**](https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html#Command-Substitution) (подстановка команды) — подстановка вместо команды её вывода в stdout, полученного в результате исполнения. При этом команда исполняется в subshell. Пример:
 {line-numbers: false, format: Bash}
 ```
@@ -48,6 +54,14 @@ echo "$(date)"
 ```
 
 [**Conditional Statement**](https://en.wikipedia.org/wiki/Conditional_(computer_programming)) или Conditional Expression ([условный оператор](https://ru.wikipedia.org/wiki/Ветвление_(программирование))) — конструкция языка программирования, позволяющая выполнить определённый набор команд в зависимости от значения некоторого логического выражения.
+
+## E
+
+[**Environment Variables**](http://mywiki.wooledge.org/Environment) (переменные окружения) — неупорядоченный набор переменных или пар ключ-значение, который копируется из родительского процесса в дочерний. Утилита `env` позволяет изменить переменные окружения для запускаемой программы. При вызове её без параметров, она выводит переменные, определённые в текущем командном интерпретаторе. Пример вызова:
+{line-numbers: false, format: Bash}
+```
+env
+```
 
 ## F
 
@@ -79,11 +93,7 @@ ls -lah
 
 ## P
 
-[**Parameter**](https://stackoverflow.com/a/36495940/6562278) — аргумент, который предоставляет информацию либо команде, либо одной из её опций. Например, путь начала поиска и имя искомого файла в команде `find`:
-{line-numbers: false, format: Bash}
-```
-find ~/Documents -name README
-```
+[**Parameter**](http://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Shell-Parameters) (параметр) — сущность, которая хранит какое-то значение. В отличие от переменной может не иметь имени.
 
 [**Parameter Expansion**](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html#Shell-Parameter-Expansion) (подстановка параметра) — подстановка вместо имени параметра его значения. Примеры:
 {line-numbers: false, format: Bash}
@@ -126,17 +136,19 @@ find / -path */doc/* -name README 1> result.txt
 
 ## S
 
-[**Shell Parameter**](http://mywiki.wooledge.org/BashGuide/Parameters) (параметр оболочки) — именованная область памяти интерпретатора, которая используется для хранения и извлечения информации.
+[**Shell Options**](https://www.tldp.org/LDP/abs/html/options.html) (опции интерпретатора) — опции или настройки, которые меняют поведение интерпретатора в режиме оболочки и исполнения скриптов. Задаются встроенной командой `set`. Например, опция включения отладочного вывода:
+{line-numbers: false, format: Bash}
+```
+set -x
+```
 
-[**Shell Variable**](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html) (переменные интерпретатора) — переменные, которые устанавливаются интерпретатором. Они нужны для его корректной работы. Доступны пользователю для чтения и записи.
+[**Shell Parameter**](http://mywiki.wooledge.org/BashGuide/Parameters) (параметр интерпретатора) — именованная область памяти интерпретатора, которая используется для хранения и извлечения информации.
+
+[**Shell Variables**](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html) (переменные оболочки) — переменные, которые устанавливаются интерпретатором. Они нужны для его корректной работы. Доступны пользователю для чтения и записи. Пример — переменная `PATH`. Иногда используется, как синоним термина Environment Variables (переменные окружения).
 
 [**Short-circuit evaluation**](https://en.wikipedia.org/wiki/Short-circuit_evaluation) (короткое замыкание) — вычисление только тех операндов логического оператора, которые достаточны для вывода значения всего выражения.
 
-[**Special Parameters**](http://mywiki.wooledge.org/BashGuide/Parameters) (специальные параметры) — параметры, устанавливаемые интерпретатором для хранения и передачи своих внутренних состояний. Доступны только для чтения. Пример специального параметра:
-{line-numbers: false, format: Bash}
-```
-echo "$?"
-```
+[**Special Parameters**](http://mywiki.wooledge.org/BashGuide/Parameters) (специальные параметры) — параметры, устанавливаемые интерпретатором для хранения и передачи своих внутренних состояний. Доступны только для чтения. Пример специального параметра — `$?`.
 
 [**Standard Streams**](https://en.wikipedia.org/wiki/Standard_streams) ([стандартные потоки](https://ru.wikipedia.org/wiki/Стандартные_потоки)) — программные каналы коммуникации приложения с окружением, в котором оно запущено. Являются абстракциями физических каналов ввода с клавиатуры и вывода на экран монитора. Каждому каналу назначается дескриптор, по которому к нему можно обратиться.
 
@@ -158,7 +170,7 @@ echo "$?"
 
 ## V
 
-[**Variable**](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html#Shell-Parameters) (переменная) — параметр, указанный по имени. Переменные задаются пользователем или интерпретатором. Пример объявления переменной:
+[**Variable**](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html#Shell-Parameters) (переменная) — параметр доступный по имени. Переменные задаются пользователем или интерпретатором. Пример объявления переменной:
 {line-numbers: false, format: Bash}
 ```
 FILENAME="README.txt"
