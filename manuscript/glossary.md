@@ -16,6 +16,8 @@ cat file.txt
 echo $((4+3))
 ```
 
+[**Array**](http://mywiki.wooledge.org/BashGuide/Arrays) (массив) — в Bash нумерованный список строк. Другими словами массив отображает целые числа в строки.
+
 ## B
 
 [**Bash**](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (Bourne again shell) — интерпретатор командной строки, разработанный Брайан Фокс. Он заменил интерпретатор Bourne shell в Linux-дистрибутивах и некоторых проприетарных Unix системах. Является POSIX-совместимым, но при этом имеет расширения не предусмотренные стандартом.
@@ -95,7 +97,7 @@ ls -lah
 
 [**Parameter**](http://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Shell-Parameters) (параметр) — сущность, которая хранит какое-то значение. В отличие от переменной может не иметь имени.
 
-[**Parameter Expansion**](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html#Shell-Parameter-Expansion) (подстановка параметра) — подстановка вместо имени параметра его значения. Примеры:
+[**Parameter Expansion**](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html#Shell-Parameter-Expansion) (подстановка параметров или подстановка переменных) — подстановка вместо имени переменной или параметра его значения. Примеры:
 {line-numbers: false, format: Bash}
 ```
 echo "$PATH"
@@ -173,12 +175,12 @@ set -x
 [**Variable**](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html#Shell-Parameters) (переменная) — параметр доступный по имени. Переменные задаются пользователем или интерпретатором. Пример объявления переменной:
 {line-numbers: false, format: Bash}
 ```
-FILENAME="README.txt"
+filename="README.txt"
 ```
 
 ## W
 
-[**Word Splitting**](https://www.gnu.org/software/bash/manual/html_node/Word-Splitting.html#Word-Splitting) (разделение слов) — механизм разделения строки аргументов на отдельные слова. В качестве разделителя используются символы, перечисленные в переменной `$IFS`. Аргументы, заключённые в кавычки не обрабатываются. Пример:
+[**Word Splitting**](https://www.gnu.org/software/bash/manual/html_node/Word-Splitting.html#Word-Splitting) (разделение слов) — разделение аргументов командной строки на слова и передача их в качестве отдельных параметров. В качестве разделителя используются символы, перечисленные в переменной `$IFS`. Аргументы, заключённые в кавычки не обрабатываются. Пример:
 {line-numbers: false, format: Bash}
 ```
 cp file1.txt file2.txt "my file.txt" ~
