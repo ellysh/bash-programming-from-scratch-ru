@@ -20,6 +20,8 @@ echo $((4+3))
 
 [**Bash**](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (Bourne again shell) — интерпретатор командной строки, разработанный Брайан Фокс. Он заменил интерпретатор Bourne shell в Linux-дистрибутивах и некоторых проприетарных Unix системах. Является POSIX-совместимым, но при этом имеет расширения не предусмотренные стандартом.
 
+[**Bash Script**](https://www.gnu.org/software/bash/manual/html_node/Shell-Scripts.html#Shell-Scripts) (Bash-скрипт) — текстовый файл, содержащий команды интерпретатора. Скрипты исполняются Bash в неинтерактивном режиме.
+
 [**Boolean Expression**](https://en.wikipedia.org/wiki/Boolean_expression) ([логическое выражение](https://ru.wikipedia.org/wiki/Логическое_выражение)) — конструкция языка программирования, результат вычисления которой может быть одно из двух значений: "истина" или "ложь".
 
 [**Bourne shell**](https://en.wikipedia.org/wiki/Bourne_shell) — интерпретатор командной строки, разработанный Стивеном Борном. Он заменил оригинальный [интерпретатор Кена Томпсона](https://en.wikipedia.org/wiki/Thompson_shell) в [Unix версии 7](https://en.wikipedia.org/wiki/Version_7_Unix). Все его функции соответствуют [POSIX-стандарту](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html). Однако, некоторых возможности, упомянутые в стандарте, отсутствуют.
