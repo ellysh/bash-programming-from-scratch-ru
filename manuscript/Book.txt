@@ -21,6 +21,6 @@ mainmatter:
   BashScripting/variables.md
   BashScripting/conditional-statement.md
 
-  links.md
   glossary.md
   answers.md
+  links.md
