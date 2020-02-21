@@ -26,6 +26,8 @@ echo $((4+3))
 
 [**Bash Script**](https://www.gnu.org/software/bash/manual/html_node/Shell-Scripts.html#Shell-Scripts) (Bash-скрипт) — текстовый файл, содержащий команды интерпретатора. Скрипты исполняются Bash в неинтерактивном режиме.
 
+[**Best Practices**](http://mywiki.wooledge.org/BashGuide/Practices) (букв. лучшие практики) — рекомендованные приемы использования языка программирования или какой-то технологии. Пример для языка Bash — заключение всех строк в двойные кавычки, чтобы избежать word splitting.
+
 [**Boolean Expression**](https://en.wikipedia.org/wiki/Boolean_expression) ([логическое выражение](https://ru.wikipedia.org/wiki/Логическое_выражение)) — конструкция языка программирования, результат вычисления которой может быть одно из двух значений: "истина" или "ложь".
 
 [**Bourne shell**](https://en.wikipedia.org/wiki/Bourne_shell) — интерпретатор командной строки, разработанный Стивеном Борном. Он заменил оригинальный [интерпретатор Кена Томпсона](https://en.wikipedia.org/wiki/Thompson_shell) в [Unix версии 7](https://en.wikipedia.org/wiki/Version_7_Unix). Все его функции соответствуют [POSIX-стандарту](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html). Однако, некоторых возможности, упомянутые в стандарте, отсутствуют.
@@ -80,6 +82,17 @@ rm -rf *
 ## G
 
 [**Globbing**](https://mywiki.wooledge.org/glob?action=show&redirect=globbing) или glob — другое название для Filename Expansion.
+
+## I
+
+[**Idiom**](https://en.wikipedia.org/wiki/Programming_idiom) ([идиома](https://ru.wikipedia.org/wiki/Идиома_(программирование))) — устойчивый способ выражения типовой конструкции в языке программирования. Идиома по-сути вляется шаблоном для реализации какого-то алгоритма или структуры данных на данном языке. Например, цикл `for` для обработки списка файлов:
+{line-numbers: false, format: Bash}
+```
+for file in ./*.txt
+do
+    cp "$file" ~/Documents
+done
+```
 
 ## L
 
