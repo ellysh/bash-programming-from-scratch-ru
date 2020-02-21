@@ -118,7 +118,7 @@ cp "my file.txt" ~
 rm "*file.txt"
 ```
 
-Мы уже познакомились с несколькими [подстановками](http://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Shell-Expansions), выполняемыми Bash. Таблица 3-2 систематизирует наши знания. 
+Мы уже познакомились с несколькими [подстановками](http://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Shell-Expansions), выполняемыми Bash. В таблице 3-2 приведены остальные, а также указан их порядок выполнения. 
 
 {caption: "Таблица 3-2. Подстановки Bash", width: "100%"}
 | Приоритет | Подстановка | Комментарий | Пример |
