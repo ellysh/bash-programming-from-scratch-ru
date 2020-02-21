@@ -28,7 +28,11 @@
 
 * [Регулярные выражения в `grep`](https://www.cyberciti.biz/faq/grep-regular-expressions).
 
-* [Best practices по использованию Bash](http://mywiki.wooledge.org/BashGuide/Practices)
+* [Best practices по использованию Bash](http://mywiki.wooledge.org/BashGuide/Practices).
+
+* [Bash coding style на основе mywiki.wooledge.org](https://github.com/bahamas10/bash-style-guide).
+
+* [Bash coding style от Google](https://google.github.io/styleguide/shellguide.html).
 
 ## Unix
 
