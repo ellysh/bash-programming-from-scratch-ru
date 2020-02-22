@@ -69,6 +69,8 @@ echo "$(date)"
 env
 ```
 
+[**Escape sequence**](https://en.wikipedia.org/wiki/Escape_sequence) ([управляющая последовательность](https://ru.wikipedia.org/wiki/Управляющая_последовательность) или [управляющие символы](https://ru.wikipedia.org/wiki/Управляющие_символы)) — совокупность символов, которые не имеют собственного значения, а вместо этого управляют механизмом их обработки. Например, символ перевода строки `\n` даёт команду устройству вывода начать новую строку.
+
 ## F
 
 [**File Descriptor**](https://en.wikipedia.org/wiki/File_descriptor) ([файловый дескриптор](https://ru.wikipedia.org/wiki/Файловый_дескриптор) или дескриптор) — абстрактный указатель на файл или канал коммуникации (поток, конвейер или сетевой сокет). Дескрипторы являются частью POSIX-интерфейса и представляют собой целые неотрицательные числа.
@@ -140,6 +142,8 @@ cp "$1" ~
 ```
 diff <(sort file1.txt) <(sort file2.txt)
 ```
+
+[**Prompt**](https://www.gnu.org/software/bash/manual/html_node/Controlling-the-Prompt.html#Controlling-the-Prompt) (приглашение командной строки) — 
 
 ## Q
 
