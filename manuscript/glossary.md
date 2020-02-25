@@ -28,7 +28,7 @@ echo $((4+3))
 
 [**Bash Script**](https://www.gnu.org/software/bash/manual/html_node/Shell-Scripts.html#Shell-Scripts) (Bash-скрипт) — текстовый файл, содержащий команды интерпретатора. Скрипты исполняются Bash в неинтерактивном режиме.
 
-[**Best Practices**](http://mywiki.wooledge.org/BashGuide/Practices) (букв. лучшие практики) — рекомендованные приемы использования языка программирования или какой-то технологии. Пример для языка Bash — заключение всех строк в двойные кавычки, чтобы избежать word splitting.
+[**Best Practices**](http://mywiki.wooledge.org/BashGuide/Practices) (хорошая практика) — рекомендованные приемы использования языка программирования или какой-то технологии. Пример для языка Bash — заключение всех строк в двойные кавычки, чтобы избежать word splitting.
 
 [**Boolean Expression**](https://en.wikipedia.org/wiki/Boolean_expression) ([логическое выражение](https://ru.wikipedia.org/wiki/Логическое_выражение)) — конструкция языка программирования, результат вычисления которой может быть одно из двух значений: "истина" или "ложь".
 
