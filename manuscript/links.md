@@ -26,6 +26,8 @@
 
 * [Подводные камни Bash](http://mywiki.wooledge.org/BashPitfalls).
 
+* [Useless Use of Cat Award](http://www.smallo.ruhr.de/award.html#grep) — примеры неправильного использования GNU утилит.
+
 * [Регулярные выражения в `grep`](https://www.cyberciti.biz/faq/grep-regular-expressions).
 
 * [Best practices по использованию Bash](http://mywiki.wooledge.org/BashGuide/Practices).

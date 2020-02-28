@@ -4,10 +4,10 @@
 
 [**alias**](https://www.gnu.org/software/bash/manual/html_node/Aliases.html#Aliases) — встроенная команда Bash для сокращения команд или указания их параметров по умолчанию.
 
-[**Argument**](http://linuxcommand.org/lc3_wss0120.php) (аргумент) — слово или строка, которые передаются в программу при её вызове из командного интерпретатора. Пример аргумента:
+[**Argument**](http://linuxcommand.org/lc3_wss0120.php) (аргумент) — слово или строка, которые передаются в программу при её вызове из командного интерпретатора. Пример аргументов:
 {line-numbers: false, format: Bash}
 ```
-cat file.txt
+grep "GNU" README.txt
 ```
 
 [**Arithmetic Expansion**](https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html#Arithmetic-Expansion) (арифметическая подстановка) — вычисление арифметического выражения и подстановка его результата. Пример:
@@ -188,7 +188,7 @@ set -x
 [**Subshell**](http://mywiki.wooledge.org/SubShell) (подоболочка) — способ группирования команд, при котором они исполняются в интерпретаторе, запущенном дочернем процессе. Переменные, определённые в дочернем процессе не доступны в родительском. Пример выполнения команд subshell:
 {line-numbers: false, format: Bash}
 ```
-(cat README | grep GNU)
+(info bash | grep -n "GNU")
 ```
 
 [**Synchronous**](https://en.wiktionary.org/wiki/synchronous) (синхронный) — обозначает события или действия происходящие в одном потоке выполнения программы.

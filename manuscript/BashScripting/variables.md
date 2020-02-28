@@ -144,7 +144,7 @@ rm "*file.txt"
 |  | | | |
 | 4 | Arithmetic Expansion | Подстановка вместо арифметических выражений их значений. | `echo $((4+3))` |
 |  | | | |
-| 5 | Command Substitution | Подстановка вместо команды её вывода. | `echo $(cat README.txt)` |
+| 5 | Command Substitution | Подстановка вместо команды её вывода. | `echo $(< README.txt)` |
 |  | | | |
 | 6 | Process Substitution | Подстановка вместо команды её вывода. В отличие от Command Substitution выполняется [асинхронно](https://ru.wikipedia.org/wiki/Асинхронность#Асинхронность_в_информатике), а ввод и вывод команды привязаны к временному файлу. | `diff <(sort file1.txt) <(sort file2.txt)` |
 |  | | | |
