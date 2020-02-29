@@ -14,3 +14,6 @@ _book
 *.pdf
 *.epub
 *.mobi
+
+# Others
+*.bak
