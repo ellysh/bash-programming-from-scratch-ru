@@ -79,7 +79,7 @@ grep -Rl "General Public License" /usr/share/doc
 grep -Rl "General Public License" /usr/share/licenses
 ```
 
-В окружении MSYS2 есть два неспецифичных для UNIX каталога установки `/mingw32` и `/mingw64`. Можно проверить и установленные в них программы:
+В окружении MSYS2 есть два неспецифичных для Unix каталога установки `/mingw32` и `/mingw64`. Можно проверить и установленные в них программы:
 {line-numbers: true, format: Bash}
 ```
 grep -Rl "General Public License" /mingw32/share/doc
