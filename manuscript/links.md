@@ -2,6 +2,8 @@
 
 ## Общая информация
 
+* [История мейнфреймов](http://www.thg.ru/cpu/mainframe_history/index.html).
+
 * Лекция ["История вычислительных машин"](https://postnauka.ru/video/86550).
 
 * Лекция ["Ретроспектива развития вычислительной техники"](https://postnauka.ru/video/38501).
