@@ -2,11 +2,19 @@
 
 ## Общая информация
 
+### На русском языке
+
+* [Цикл статей по истории электронных компьютеров](https://habr.com/ru/post/408611).
+
 * [История мейнфреймов](http://www.thg.ru/cpu/mainframe_history/index.html).
 
 * Лекция ["История вычислительных машин"](https://postnauka.ru/video/86550).
 
 * Лекция ["Ретроспектива развития вычислительной техники"](https://postnauka.ru/video/38501).
+
+### На английском языке
+
+* [Цикл статей по истории электронных компьютеров](https://technicshistory.com/2017/08/29/the-electronic-computers-part-1-prologue)
 
 ## Bash
 
