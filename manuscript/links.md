@@ -6,6 +6,12 @@
 
 * [Цикл статей по истории электронных компьютеров](https://habr.com/ru/post/408611).
 
+* [История ОС Unix](https://habr.com/ru/post/147774).
+
+* [История ОС Linux](https://habr.com/ru/post/95646).
+
+* [История ОС от Apple](https://habr.com/ru/post/198016).
+
 * [История мейнфреймов](http://www.thg.ru/cpu/mainframe_history/index.html).
 
 * Лекция ["История вычислительных машин"](https://postnauka.ru/video/86550).
@@ -15,6 +21,8 @@
 ### На английском языке
 
 * [Цикл статей по истории электронных компьютеров](https://technicshistory.com/2017/08/29/the-electronic-computers-part-1-prologue)
+
+* [История ОС от Apple](http://www.kernelthread.com/publications/appleoshistory).
 
 ## Bash
 
