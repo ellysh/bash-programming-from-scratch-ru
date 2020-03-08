@@ -2,6 +2,8 @@
 
 ## A
 
+[**Algorithm**](https://en.wikipedia.org/wiki/Algorithm) ([алгоритм](https://ru.wikipedia.org/wiki/Алгоритм)) — это конечная последовательность инструкций, понятных исполнителю, для выполнения какого-либо вычисления или решения задачи.
+
 [**alias**](https://www.gnu.org/software/bash/manual/html_node/Aliases.html#Aliases) — встроенная команда Bash для сокращения команд или указания их параметров по умолчанию.
 
 [**Application Programming Interface**](https://en.wikipedia.org/wiki/Application_programming_interface) или API ([интерфейс прикладного программирования](https://ru.wikipedia.org/wiki/API)) — это набор соглашений о взаимодействии компонентов информационной системы. Они описывают: какая функция будет выполнена вызываемым компонентов, какие данные должны быть переданы ему на вход, какие выходные данные будут возвращены.
@@ -66,6 +68,8 @@ echo "$(date)"
 ```
 
 [**Conditional Statement**](https://en.wikipedia.org/wiki/Conditional_(computer_programming)) или Conditional Expression ([условный оператор](https://ru.wikipedia.org/wiki/Ветвление_(программирование))) — конструкция языка программирования, позволяющая выполнить определённый набор команд в зависимости от значения некоторого логического выражения.
+
+[**Computer Program**](https://en.wikipedia.org/wiki/Computer_program) ([компьютерная программа](https://ru.wikipedia.org/wiki/Компьютерная_программа)) — 
 
 ## E
 
