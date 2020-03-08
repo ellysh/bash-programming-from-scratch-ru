@@ -32,6 +32,8 @@ echo $((4+3))
 
 [**Boolean Expression**](https://en.wikipedia.org/wiki/Boolean_expression) ([логическое выражение](https://ru.wikipedia.org/wiki/Логическое_выражение)) — конструкция языка программирования, результат вычисления которой может быть одно из двух значений: "истина" или "ложь".
 
+[**Bottleneck**](https://en.wikipedia.org/wiki/Bottleneck_(software)) (букв. бутылочное горло, узкое место) — компонент или ресурс информационной системы, который ограничивает её общую производительность или пропускную способность.
+
 [**Bourne shell**](https://en.wikipedia.org/wiki/Bourne_shell) — интерпретатор командной строки, разработанный Стивеном Борном. Он заменил оригинальный [интерпретатор Кена Томпсона](https://en.wikipedia.org/wiki/Thompson_shell) в [Unix версии 7](https://en.wikipedia.org/wiki/Version_7_Unix). Все его функции соответствуют [POSIX-стандарту](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html). Однако, некоторых возможности, упомянутые в стандарте, отсутствуют.
 
 [**Brace Expansion**](http://mywiki.wooledge.org/BraceExpansion) (подстановка фигурных скобок) — генерация слов из заданных частей. Является функцией Bash и отсутствует в стандарте POSIX. Следующие две команды эквивалентны:
