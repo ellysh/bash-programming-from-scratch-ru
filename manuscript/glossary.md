@@ -4,6 +4,8 @@
 
 [**alias**](https://www.gnu.org/software/bash/manual/html_node/Aliases.html#Aliases) — встроенная команда Bash для сокращения команд или указания их параметров по умолчанию.
 
+[**Application Programming Interface**](https://en.wikipedia.org/wiki/Application_programming_interface) или API ([интерфейс прикладного программирования](https://ru.wikipedia.org/wiki/API)) — это набор соглашений о взаимодействии компонентов информационной системы. Они описывают: какая функция будет выполнена вызываемым компонентов, какие данные должны быть переданы ему на вход, какие выходные данные будут возвращены.
+ 
 [**Argument**](http://linuxcommand.org/lc3_wss0120.php) (аргумент) — слово или строка, которые передаются в программу при её вызове из командного интерпретатора. Пример аргументов:
 {line-numbers: false, format: Bash}
 ```
