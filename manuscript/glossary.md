@@ -69,7 +69,7 @@ echo "$(date)"
 
 [**Conditional Statement**](https://en.wikipedia.org/wiki/Conditional_(computer_programming)) или Conditional Expression ([условный оператор](https://ru.wikipedia.org/wiki/Ветвление_(программирование))) — конструкция языка программирования, позволяющая выполнить определённый набор команд в зависимости от значения некоторого логического выражения.
 
-[**Computer Program**](https://en.wikipedia.org/wiki/Computer_program) ([компьютерная программа](https://ru.wikipedia.org/wiki/Компьютерная_программа)) — 
+[**Computer Program**](https://en.wikipedia.org/wiki/Computer_program) ([компьютерная программа](https://ru.wikipedia.org/wiki/Компьютерная_программа)) — набор инструкций, которые могут быть исполнены компьютером для решения конкретной задачи.
 
 ## E
 
