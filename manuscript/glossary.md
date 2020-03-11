@@ -20,7 +20,7 @@ grep "GNU" README.txt
 echo $((4+3))
 ```
 
-[**Array**](http://mywiki.wooledge.org/BashGuide/Arrays) (массив) — в Bash нумерованный список строк. Другими словами массив отображает целые числа в строки.
+[**Array**](http://mywiki.wooledge.org/BashGuide/Arrays) ([массив](https://ru.wikipedia.org/wiki/Массив_(тип_данных))) — в Bash нумерованный список строк. Другими словами массив отображает целые числа в строки.
 
 [**Asynchrony**](https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)) (асинхронность) — означает события, происходящие независимо от основного потока выполнения программы. Так же под асинхронностью понимаются методики обработки таких событий.
 
