@@ -546,7 +546,7 @@ files=(documents/reports/*.txt)
 Если все элементы массива вам известны, вы можете объявить его следующим образом:
 {line-numbers: false, format: Bash}
 ```
-files=("/usr/share/doc/bash/README", "/usr/share/doc/flex/README.md", "/usr/share/doc/xz/README")
+files=("/usr/share/doc/bash/README" "/usr/share/doc/flex/README.md" "/usr/share/doc/xz/README")
 ```
 
 В качестве элементов массива можно использовать другие переменные. Например так:
@@ -555,13 +555,13 @@ files=("/usr/share/doc/bash/README", "/usr/share/doc/flex/README.md", "/usr/shar
 bash_doc="/usr/share/doc/bash/README"
 flex_doc="/usr/share/doc/flex/README.md"
 xz_doc="/usr/share/doc/xz/README"
-files=("$bash_doc", "$flex_doc", "$xz_doc")
+files=("$bash_doc" "$flex_doc" "$xz_doc")
 ```
 
 Также вы можете явно задавать индексы для каждого элемента. Например, c учётом объявленных выше переменных `bash_doc` и `flex_doc` можно создать следующий массив `files`:
 {line-numbers: false, format: Bash}
 ```
-files=([0]="$bash_doc", [1]="$flex_doc", [5]="/usr/share/doc/xz/README")
+files=([0]="$bash_doc" [1]="$flex_doc" [5]="/usr/share/doc/xz/README")
 ```
 
 Обратите внимание на отсутствие пробелов до и после каждого знака равно `=`. Запомните простое правило: в Bash при объявлении переменных пробелы до и после `=` никогда не ставятся.
@@ -575,17 +575,3 @@ files[5]="/usr/share/doc/xz/README"
 ```
 
 Наверное, вы обратили внимание, что в последних двух примерах нумерация индексов идёт не по порядку. Bash допускает массивы с пропусками (они называются **sparse arrays**).
-
-При объявлении всего массива за раз с использованием переменных, которые ещё не были определены, произойдёт неочевидная ошибка. Предположим, что вы объявили массив `files`:
-{line-numbers: false, format: Bash}
-```
-files=([0]="$bash_doc", [1]="$flex_doc", [5]="/usr/share/doc/xz/README")
-```
-
-Если переменные `bash_doc` и `flex_doc` по какой-либо причине равны пустым строкам, вы получите следующее объявление после всех подстановок Bash:
-{line-numbers: false, format: Bash}
-```
-files=([0]=, [1]=, [5]=/usr/share/doc/xz/README)
-```
-
-В результате элементы массива с индексами 0 и 1 будут равны символу запятая `,`. Учитывайте эту потенциальную проблему. Чтобы её избежать, лучше всегда использовать присваивание отдельных элементов, когда их значения читаются из переменных.
