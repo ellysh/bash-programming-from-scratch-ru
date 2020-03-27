@@ -110,6 +110,8 @@ rm -rf *
 
 [**Foreground**](https://www.gnu.org/software/bash/manual/html_node/Job-Control-Basics.html#Job-Control-Basics) (активный режим) — режим исполнения задачи (job) в текущем терминале, при котором её идентификатор относится к [группе идентификаторов](https://en.wikipedia.org/wiki/Process_group) процесса терминала и она обрабатывает все прерывания клавиатуры.
 
+**Function** (функция) — то же самое что и подпрограмма (subroutine).
+
 ## G
 
 [**Globbing**](https://mywiki.wooledge.org/glob?action=show&redirect=globbing) или glob — другое название для Filename Expansion.
