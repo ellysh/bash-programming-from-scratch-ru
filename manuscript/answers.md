@@ -301,16 +301,16 @@ find . -maxdepth 1 -type f -name "*.txt" -exec "${1:-cp}" -t ~ {} \;
 Исходная команда выглядит следующих образом:
 {line-numbers: false, format: Bash}
 ```
-( grep -Rl "123" target | xargs cp -t . && echo "cp - OK" || ! echo "cp - FAILS" ) && ( grep -RL "123" target | xargs rm && echo "rm - OK" || echo "rm - FAILS" )
+( grep -RlZ "123" target | xargs -0 cp -t . && echo "cp - OK" || ! echo "cp - FAILS" ) && ( grep -RLZ "123" target | xargs -0 rm && echo "rm - OK" || echo "rm - FAILS" )
 ```
 
 Обратите внимание на отрицание вывода "cp - FAILS". Если бы не оно, мы могли бы разбить команду на два отдельных вызова. Но в данном случае выполнение прервётся, если первый `grep` не найдёт ни одного файла и команда `cp` не сможет отработать корректно. Поэтому, нам нужен вложенный `if-else` следующего вида:
 {line-numbers: true, format: Bash}
 ```
-if grep -Rl "123" target | xargs cp -t .
+if grep -RlZ "123" target | xargs -0 cp -t .
 then
   echo "cp - OK"
-  if grep -RL "123" target | xargs rm
+  if grep -RLZ "123" target | xargs -0 rm
   then
     echo "rm - OK"
   else
@@ -324,7 +324,7 @@ fi
 Если применить технику раннего возврата, мы получим следующее:
 {line-numbers: true, format: Bash}
 ```
-if ! grep -Rl "123" target | xargs cp -t .
+if ! grep -RlZ "123" target | xargs -0 cp -t .
 then
   echo "cp - FAILS"
   exit 1
@@ -332,7 +332,7 @@ fi
 
 echo "cp - OK"
 
-if grep -RL "123" target | xargs rm
+if grep -RLZ "123" target | xargs -0 rm
 then
   echo "rm - OK"
 else
