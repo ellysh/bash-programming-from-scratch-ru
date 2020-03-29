@@ -122,7 +122,7 @@ rm -rf *
 
 ## I
 
-[**Idiom**](https://en.wikipedia.org/wiki/Programming_idiom) ([идиома](https://ru.wikipedia.org/wiki/Идиома_(программирование))) — устойчивый способ выражения типовой конструкции в языке программирования. Идиома по-сути вляется шаблоном для реализации какого-то алгоритма или структуры данных на данном языке. Например, цикл `for` для обработки списка файлов:
+[**Idiom**](https://en.wikipedia.org/wiki/Programming_idiom) ([идиома](https://ru.wikipedia.org/wiki/Идиома_(программирование))) — устойчивый способ выражения типовой конструкции в языке программирования. Идиома по сути вляется шаблоном для реализации какого-то алгоритма или структуры данных на данном языке. Например, цикл `for` для обработки списка файлов:
 {line-numbers: false, format: Bash}
 ```
 for file in ./*.txt
@@ -188,7 +188,7 @@ cp "$1" ~
 diff <(sort file1.txt) <(sort file2.txt)
 ```
 
-[**Prompt**](https://www.gnu.org/software/bash/manual/html_node/Controlling-the-Prompt.html#Controlling-the-Prompt) (приглашение командной строки) — 
+[**Prompt**](https://www.gnu.org/software/bash/manual/html_node/Controlling-the-Prompt.html#Controlling-the-Prompt) (приглашение командной строки) — последовательность символов, которую выводит командный интерпретатор в случае готовности обработать следующую команду пользователя.
 
 ## Q
 

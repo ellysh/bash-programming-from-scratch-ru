@@ -43,6 +43,7 @@
 |  | | | |
 |            | Индексируемый массив | Хранит нумерованный список строк. | `cities=("London" "New York" "Berlin") ; echo "${cities[1]}"` |
 |  | | | `cities[0]="London" ; cities[1]="New York" ; cities[2]="Berlin" ; echo "${cities[1]}"` |
+|  | | | |
 |            | [**Ассоциативный массив**](https://ru.wikipedia.org/wiki/Ассоциативный_массив) | Структура данных, каждый элемент которой представляет собой пару ключ-значение. Ключём и значением являются строки. | `declare -A cities=( ["Alice"]="London" ["Bob"]="New York" ["Eve"]="Berlin" ) ; echo "${cities[Bob]}"` |
 | Возможность изменения | Константны | Не могут быть удалены. Хранят значения, которые нельзя переопределить. | `readonly CONSTANT="ABC" ; echo "$CONSTANT"` |
 |                     | | | `declare -r CONSTANT="ABC" ; echo "$CONSTANT"` |
