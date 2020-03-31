@@ -19,6 +19,7 @@ mainmatter:
   BashScripting/scripts-features.md
   BashScripting/variables.md
   BashScripting/conditional-statement.md
+  BashScripting/arithmetic-expression.md
 
   glossary.md
   answers.md
