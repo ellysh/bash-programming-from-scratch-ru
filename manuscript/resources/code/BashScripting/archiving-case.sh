@@ -2,15 +2,20 @@
 
 operation="$1"
 
-if [[ "$operation" == "a" ]]
-then
+case "$operation" in
+  "a")
     bsdtar -c -f documents.tar ~/Documents
-elif [[ "$operation" == "c" ]]
-then
+    ;;
+
+  "c")
     bsdtar -c -j -f documents.tar.bz2 ~/Documents
-elif [[ "$operation" == "x" ]]
-then
+    ;;
+
+  "x")
     bsdtar -x -f documents.tar*
-else
+    ;;
+
+  *)
     echo "Указана недопустимая опция"
-fi
+    ;;
+esac
