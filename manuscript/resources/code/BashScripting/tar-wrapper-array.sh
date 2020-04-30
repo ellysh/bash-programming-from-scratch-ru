@@ -1,6 +1,7 @@
 #!/bin/bash
 
 option="$1"
+
 declare -A utils=(
   ["b"]="bsdtar"
   ["t"]="tar")
