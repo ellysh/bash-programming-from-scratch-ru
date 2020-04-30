@@ -4,11 +4,11 @@ utility="$1"
 
 case "$utility" in
   "b")
-    bsdtar $2
+    bsdtar "${@:2}"
     ;;
 
   "t")
-    tar $2
+    tar "${@:2}"
     ;;
 
   *)

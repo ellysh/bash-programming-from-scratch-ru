@@ -12,4 +12,4 @@ then
   exit 1
 fi
 
-${utils["$option"]} $2
+${utils["$option"]} "${@:2}"
