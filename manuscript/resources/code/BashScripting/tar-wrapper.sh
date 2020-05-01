@@ -3,11 +3,11 @@
 utility="$1"
 
 case "$utility" in
-  "b")
+  "-b"|"--bsdtar")
     bsdtar "${@:2}"
     ;;
 
-  "t")
+  "-t"|"--tar")
     tar "${@:2}"
     ;;
 

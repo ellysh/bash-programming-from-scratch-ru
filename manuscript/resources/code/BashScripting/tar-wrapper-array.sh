@@ -3,8 +3,10 @@
 option="$1"
 
 declare -A utils=(
-  ["b"]="bsdtar"
-  ["t"]="tar")
+  ["-b"]="bsdtar"
+  ["--bsdtar"]="bsdtar"
+  ["-t"]="tar"
+  ["--tar"]="tar")
 
 if [[ -z "$option" || ! -v utils["$option"] ]]
 then
