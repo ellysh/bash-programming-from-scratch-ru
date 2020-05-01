@@ -456,6 +456,8 @@ fi
 | `-c` | Архивация со сжатием |
 | `-d` | Разархивация |
 
+I> В своих скриптах старайтесь всегда следовать [POSIX-соглашению](https://www.gnu.org/software/libc/manual/html_node/Argument-Syntax.html) и [GNU-расширению](https://www.gnu.org/prep/standards/html_node/Command_002dLine-Interfaces.html) к нему о формате опций и параметров утилит командной строки.
+
 Значение переданной в скрипт опции можно проверить в конструкции `if`. Например так, как демонстрирует листинг 3-12.
 
 {caption: "Листинг 3-12. Скрипт архивации документов", line-numbers: true, format: Bash}
