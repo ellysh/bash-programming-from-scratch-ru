@@ -2,13 +2,13 @@
 
 operation="$1"
 
-if [[ "$operation" == "a" ]]
+if [[ "$operation" == "-a" ]]
 then
     bsdtar -c -f documents.tar ~/Documents
-elif [[ "$operation" == "c" ]]
+elif [[ "$operation" == "-c" ]]
 then
     bsdtar -c -j -f documents.tar.bz2 ~/Documents
-elif [[ "$operation" == "x" ]]
+elif [[ "$operation" == "-x" ]]
 then
     bsdtar -x -f documents.tar*
 else

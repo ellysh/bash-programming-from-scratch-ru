@@ -3,15 +3,15 @@
 operation="$1"
 
 case "$operation" in
-  "a")
+  "-a")
     bsdtar -c -f documents.tar ~/Documents
     ;;
 
-  "c")
+  "-c")
     bsdtar -c -j -f documents.tar.bz2 ~/Documents
     ;;
 
-  "x")
+  "-x")
     bsdtar -x -f documents.tar*
     ;;
 

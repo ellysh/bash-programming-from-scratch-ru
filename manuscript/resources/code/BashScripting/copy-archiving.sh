@@ -3,11 +3,11 @@
 operation="$1"
 
 case "$operation" in
-  "a")
+  "-a")
     find Documents -name "*.pdf" -type f -print0 | xargs -0 bsdtar -c -j -f documents.tar.bz2
     ;&
 
-  "c")
+  "-c")
     cp documents.tar.bz2 ~/backup
     ;;
 
