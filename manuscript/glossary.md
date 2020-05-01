@@ -262,6 +262,8 @@ set -x
 filename="README.txt"
 ```
 
+[**Vulnerability**](https://en.wikipedia.org/wiki/Vulnerability_(computing)) ([уязвимость](https://ru.wikipedia.org/wiki/Уязвимость_(компьютерная_безопасность))) — ошибка или недостаток в системе, используя которую можно выполнить несанкционированные действия.
+
 ## W
 
 [**Word Splitting**](https://www.gnu.org/software/bash/manual/html_node/Word-Splitting.html#Word-Splitting) (разделение слов) — разделение аргументов командной строки на слова и передача их в качестве отдельных параметров. В качестве разделителя используются символы, перечисленные в переменной `$IFS`. Аргументы, заключённые в кавычки не обрабатываются. Пример:
