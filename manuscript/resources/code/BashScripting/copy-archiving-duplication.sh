@@ -14,5 +14,6 @@ case "$operation" in
 
   *)
     echo "Указана недопустимая опция"
+    exit 1
     ;;
 esac

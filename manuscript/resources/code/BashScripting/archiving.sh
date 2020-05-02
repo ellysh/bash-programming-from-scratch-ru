@@ -13,4 +13,5 @@ then
     bsdtar -x -f documents.tar*
 else
     echo "Указана недопустимая опция"
+    exit 1
 fi
