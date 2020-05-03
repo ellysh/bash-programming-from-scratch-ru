@@ -204,6 +204,8 @@ diff <(sort file1.txt) <(sort file2.txt)
 
 ## R
 
+[**Recursion**](https://en.wikipedia.org/wiki/Recursion_(computer_science)) ([рекурсия](https://ru.wikipedia.org/wiki/Рекурсия#В_программировании)) — вызов функции из неё же самой (простая рекурсия) или через другие функции (косвенная рекурсия).
+
 [**Redirection Operator**](https://www.gnu.org/software/bash/manual/html_node/Redirections.html#Redirections) (оператор перенаправления) — специальная конструкция языка Bash и Bourne shell, которая позволяет перенаправлять ввод и вывод встроенных команд, утилит и приложений. В качестве цели или источника перенаправления указываются файловые дескрипторы, которые могут быть привязаны к файлам или стандартным потокам. Пример перенаправления:
 {line-numbers: false, format: Bash}
 ```
