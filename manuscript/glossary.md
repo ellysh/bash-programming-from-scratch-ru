@@ -69,9 +69,11 @@ echo "$(date)"
 
 [**Compiler**](https://en.wikipedia.org/wiki/Compiler) ([компилятор](https://ru.wikipedia.org/wiki/Компилятор)) — программа для перевода исходного кода с одного языка программирования на другой. Как правило, компиляторы переводят код с высокоуровневых языков на низкоуровневые или машинный код.
 
+[**Computer Program**](https://en.wikipedia.org/wiki/Computer_program) ([компьютерная программа](https://ru.wikipedia.org/wiki/Компьютерная_программа)) — набор инструкций, которые могут быть исполнены компьютером для решения конкретной задачи.
+
 [**Conditional Statement**](https://en.wikipedia.org/wiki/Conditional_(computer_programming)) или Conditional Expression ([условный оператор](https://ru.wikipedia.org/wiki/Ветвление_(программирование))) — конструкция языка программирования, позволяющая выполнить определённый набор команд в зависимости от значения некоторого логического выражения.
 
-[**Computer Program**](https://en.wikipedia.org/wiki/Computer_program) ([компьютерная программа](https://ru.wikipedia.org/wiki/Компьютерная_программа)) — набор инструкций, которые могут быть исполнены компьютером для решения конкретной задачи.
+[**Control Flow**](https://en.wikipedia.org/wiki/Control_flow) ([порядок выполнения](https://ru.wikipedia.org/wiki/Порядок_выполнения)) — порядок выполнения операторов и инструкций, а таже вызова функций программы в процессе её работы.
 
 ## E
 
