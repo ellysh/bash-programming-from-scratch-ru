@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-until ping -c 1 google.com &> /dev/null
+until ping -c 1 -W 1 google.com &> /dev/null
 do
   sleep 1
 done
