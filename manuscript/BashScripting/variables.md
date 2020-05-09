@@ -859,7 +859,7 @@ Bob Mallory Alice Eve
 Размер массива выводится с помощью символа решётка `#`:
 {line-numbers: true, format: Bash}
 ```
-$ echo "${contacts[@]}"
+$ echo "${#contacts[@]}"
 4
 ```
 
