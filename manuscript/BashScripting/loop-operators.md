@@ -270,8 +270,10 @@ read -r path file
 В этом случае в переменную `path` попадёт строка `~/My`, а в `file` всё остальное: `Documents report.txt`. Всегда учитывайте эту особенность работы утилиты `read`. Эту проблему можно решить, если переопределить зарезервированную переменную `IFS`. Например так:
 {line-numbers: false, format: text}
 ```
-IFS="," read -r path file
+IFS=$',' read -r path file
 ```
+
+I> В этом примере мы применили специфичный для Bash [вид кавычек](http://mywiki.wooledge.org/Quotes) `$'...'`. В них не выполняются никакие подстановки. Но некоторые управляющие последовательности разрешены: `\n` (новая строка), `\\` (экранированный обратный слэш), `\t` (табуляция) и `\xnn` (байты в шестнадцатеричной системе).
 
 Тогда следующий ввод пользователя даст корректный результат.
 {line-numbers: true, format: text}
@@ -292,7 +294,7 @@ read -r contact < contacts.txt
 Вы можете сохранить имя и контактные данные в разные переменные. Для этого в качестве разделителя определите знак равно `=`. Получится следующий вызов:
 {line-numbers: false, format: Bash}
 ```
-IFS="=" read -r name contact < contacts.txt
+IFS=$'=' read -r name contact < contacts.txt
 ```
 
 Теперь имя `Alice` попало в переменную `name`, а адрес электронной почты в `contact`.
@@ -300,7 +302,7 @@ IFS="=" read -r name contact < contacts.txt
 Чтобы пройти по всему списку контактов в файле `contacts.txt`, мы могли бы написать следующий цикл `while`:
 {line-numbers: true, format: Bash}
 ```
-while IFS="=" read -r name contact < "contacts.txt"
+while IFS=$'=' read -r name contact < "contacts.txt"
 do
   echo "$name = $contact"
 done
@@ -322,7 +324,7 @@ done < ФАЙЛ
 Таким образом правильный вариант цикла `while` для чтения файла `contacts.txt` выглядит так:
 {line-numbers: true, format: Bash}
 ```
-while IFS="=" read -r name contact
+while IFS=$'=' read -r name contact
 do
   echo "$name = $contact"
 done < "contacts.txt"
