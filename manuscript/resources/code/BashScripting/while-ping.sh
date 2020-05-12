@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 while ! ping -c 1 -W 1 google.com &> /dev/null
 do
