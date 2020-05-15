@@ -4,7 +4,7 @@ result=1
 
 for (( i = 1; i <= $1; ++i ))
 do
-  ((result *= $i))
+  ((result *= i))
 done
 
 echo "Факториал числа $1 равен $result"
