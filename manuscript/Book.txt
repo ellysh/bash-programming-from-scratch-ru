@@ -21,6 +21,7 @@ mainmatter:
   BashScripting/conditional-statement.md
   BashScripting/arithmetic-expression.md
   BashScripting/loop-operators.md
+  BashScripting/functions.md
 
   glossary.md
   answers.md
