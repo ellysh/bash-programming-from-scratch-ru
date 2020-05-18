@@ -204,6 +204,8 @@ cp "$1" ~
 diff <(sort file1.txt) <(sort file2.txt)
 ```
 
+[**Programming paradigm**](https://en.wikipedia.org/wiki/Programming_paradigm) ([парадигма программирования](https://ru.wikipedia.org/wiki/Парадигма_программирования)) — это набор идей, методов и принципов, которые определяют способ написания программы.
+
 [**Prompt**](https://www.gnu.org/software/bash/manual/html_node/Controlling-the-Prompt.html#Controlling-the-Prompt) (приглашение командной строки) — последовательность символов, которую выводит командный интерпретатор в случае готовности обработать следующую команду пользователя.
 
 ## Q
