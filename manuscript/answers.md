@@ -862,6 +862,7 @@ print_error()
 code_to_error_ru()
 {
   declare -a messages
+
   messages[1]="Не найден файл"
   messages[2]="Нет прав для чтения файла"
 
@@ -871,6 +872,7 @@ code_to_error_ru()
 code_to_error_en()
 {
   declare -a messages
+
   messages[1]="The following file was not found:"
   messages[2]="You do not have permissions to read the following file:"
 
@@ -878,4 +880,23 @@ code_to_error_en()
 }
 ```
 
-На самом деле можно сделать один ассоциативный массив, в котором будут собраны все языки и сообщения. В качестве ключа в таком массиве может использоваться комбинация значения переменной `LANG` и кода сообщения.
+На самом деле можно сделать один ассоциативный массив, в котором будут собраны все языки и сообщения. В качестве ключа в таком массиве может использоваться комбинация значения переменной `LANGUAGE` и кода сообщения. В результате мы сможем обойтись только одной функцией `print_error`:
+{line-numbers: true, format: Bash}
+```
+#!/bin/bash
+
+print_error()
+{
+  declare -A messages
+
+  messages["ru_RU",1]="Не найден файл"
+  messages["ru_RU",2]="Нет прав для чтения файла"
+
+  messages["en_US",1]="The following file was not found:"
+  messages["en_US",2]="You do not have permissions to read the          following file:"
+
+  echo "${messages[$LANGUAGE,$1]} $2" >> debug.log
+}
+
+print_error 1 "readme.txt"
+```
