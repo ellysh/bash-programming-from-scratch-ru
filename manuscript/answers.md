@@ -437,7 +437,7 @@ case "$file" in
     ln -s ~/.bashrc-work ~/.bashrc
     ;;
 
-  *) 
+  *)
     echo "Указана недопустимая опция"
     ;; 
 esac
@@ -724,3 +724,113 @@ x = 75 + (100 - 75) / 2 = 87.5
 ``` 
 
 Вы можете округлить результат в большую или меньшую сторону. Это неважно. Округлим в меньшую и получим число 87 для следующего ввода. Если число до сих пор не было отгадано, продолжаем делить диапазон возможных чисел пополам. В конце концов семи шагов должно хватить для поиска.
+
+##### Упражнение 3-13. Использование функций
+
+Вариант с оператором `case` уже был рассмотрен в примерах. Если мы объединим код функций `print_error` и `code_to_error` в один файл, то получим следующее:
+{line-numbers: true, format: Bash}
+```
+#!/bin/bash
+
+code_to_error()
+{
+  case $1 in
+    1)
+      echo "Не найден файл"
+      ;;
+    2)
+      echo "Нет прав для чтения файла"
+      ;;
+  esac
+}
+
+print_error()
+{
+  echo "$(code_to_error $1) $2" >> debug.log
+}
+
+print_error 1 "readme.txt"
+```
+
+Переименуем функцию `code_to_error` на `code_to_error_ru`, чтобы её имя отражало язык возвращаемых сообщений.
+
+Далее дополним скрипт функцией `code_to_error_en`, которая будет возвращать текст на английском для соответствующего кода ошибки. Эта функция может выглядеть следующим образом:
+{line-numbers: true, format: Bash}
+```
+code_to_error_en()
+{
+  case $1 in
+    1)
+      echo "The following file was not found:"
+      ;;
+    2)
+      echo "You do not have permissions to read the following file:"
+      ;;
+  esac
+}
+```
+
+Теперь нам необходимо выбрать, какую функцию `code_to_error_ru` или `code_to_error_en` вызывать в `print_error`. Чтобы сделать правильный выбор, будем читать переменную окружения `LANG`. Тогда полный скрипт будет выглядеть следующим образом:
+{line-numbers: true, format: Bash}
+```
+#!/bin/bash
+
+code_to_error_ru()
+{
+  case $1 in
+    1)
+      echo "Не найден файл"
+      ;;
+    2)
+      echo "Нет прав для чтения файла"
+      ;;
+  esac
+}
+
+code_to_error_en()
+{
+  case $1 in
+    1)
+      echo "The following file was not found:"
+      ;;
+    2)
+      echo "You do not have permissions to read the following file:"
+      ;;
+  esac
+}
+
+print_error()
+{
+  if [[ "$LANG" == ru_RU* ]]
+  then
+    echo "$(code_to_error_ru $1) $2" >> debug.log
+  else
+    echo "$(code_to_error_en $1) $2" >> debug.log
+  fi
+}
+
+print_error 1 "readme.txt"
+```
+
+Если язык системы русский, то есть в переменной `LANG` встречается шаблон `ru_Ru*`, вызывается функция `code_to_error_ru`. В любом другом случае вызывается `code_to_error_en`.
+
+Конструкцию `if` в функции `print_error` можно заменить на `case`. Например следующим образом:
+{line-numbers: true, format: Bash}
+```
+print_error()
+{
+  case $LANG in
+    ru_RU)
+      echo "$(code_to_error_ru $1) $2" >> debug.log
+      ;;
+    en_US)
+      echo "$(code_to_error_en $1) $2" >> debug.log
+      ;;
+    *)
+      echo "$(code_to_error_en $1) $2" >> debug.log
+      ;;
+  esac
+}
+```
+
+Вариант с `case` будет удобнее, если необходимо поддерживать более двух языков.
