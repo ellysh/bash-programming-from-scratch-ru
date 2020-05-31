@@ -64,6 +64,8 @@
 
 * [Сервис для детального анализа введённых Bash-команд](https://explainshell.com/#).
 
+* [Инструкция по локализации Bash-скриптов](https://mywiki.wooledge.org/BashFAQ/098?highlight=(Localization))
+
 ## Unix-окружение
 
 ### На русском языке
