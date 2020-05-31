@@ -820,10 +820,10 @@ print_error 1 "readme.txt"
 print_error()
 {
   case $LANG in
-    ru_RU)
+    ru_RU*)
       echo "$(code_to_error_ru $1) $2" >> debug.log
       ;;
-    en_US)
+    en_US*)
       echo "$(code_to_error_en $1) $2" >> debug.log
       ;;
     *)
@@ -834,3 +834,25 @@ print_error()
 ```
 
 Вариант с `case` будет удобнее, если необходимо поддерживать более двух языков.
+
+В функции `print_error` происходит дублирование кода. В каждом блоке конструкции `case` выполняется одна и та же команда `echo`. Единственное различие между блоками — это вызываемая функция для конвертирования кода в текст. Чтобы избежать дублирования, воспользуемся переменной `func`, которая будет хранить имя функции для конвертирования. Получим следующий результат:
+{line-numbers: true, format: Bash}
+```
+print_error()
+{
+  case $LANG in
+    ru_RU)
+      func="code_to_error_ru"
+      ;;
+    en_US)
+      func="code_to_error_en"
+      ;;
+    *)
+      func="code_to_error_en"
+      ;;
+  esac
+
+  echo "$($func $1) $2" >> debug.log
+}
+```
+
