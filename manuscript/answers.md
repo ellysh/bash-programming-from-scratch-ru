@@ -842,13 +842,13 @@ print_error()
 {
   case $LANG in
     ru_RU)
-      func="code_to_error_ru"
+      local func="code_to_error_ru"
       ;;
     en_US)
-      func="code_to_error_en"
+      local func="code_to_error_en"
       ;;
     *)
-      func="code_to_error_en"
+      local func="code_to_error_en"
       ;;
   esac
 
@@ -856,3 +856,26 @@ print_error()
 }
 ```
 
+Конструкции `case` в функциях `code_to_error_ru` и `code_to_error_en` можно заменить на индексируемые массивы. Например, следующим образом:
+{line-numbers: true, format: Bash}
+```
+code_to_error_ru()
+{
+  declare -a messages
+  messages[1]="Не найден файл"
+  messages[2]="Нет прав для чтения файла"
+
+  echo "${messages[$1]}"
+}
+
+code_to_error_en()
+{
+  declare -a messages
+  messages[1]="The following file was not found:"
+  messages[2]="You do not have permissions to read the following file:"
+
+  echo "${messages[$1]}"
+}
+```
+
+На самом деле можно сделать один ассоциативный массив, в котором будут собраны все языки и сообщения. В качестве ключа в таком массиве может использоваться комбинация значения переменной `LANG` и кода сообщения.
