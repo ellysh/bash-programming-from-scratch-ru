@@ -23,6 +23,8 @@ mainmatter:
   BashScripting/loop-operators.md
   BashScripting/functions.md
 
+  finalwords.md
+
   glossary.md
   answers.md
   links.md
