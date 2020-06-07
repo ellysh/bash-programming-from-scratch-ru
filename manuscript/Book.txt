@@ -24,7 +24,7 @@ mainmatter:
   BashScripting/functions.md
 
   package-manager.md
-  
+
   finalwords.md
 
   glossary.md
