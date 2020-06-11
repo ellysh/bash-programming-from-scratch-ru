@@ -118,6 +118,8 @@ rm -rf *
 
 ## G
 
+[**General-purpose programming language**](https://en.wikipedia.org/wiki/General-purpose_programming_language) (язык программирования общего назначения) — язык, созданный с целью разработки приложений для различных прикладных областей. В нём отсутствуют конструкции, применимые только в какой-то одной области и бесполезные в других.
+
 [**Globbing**](https://mywiki.wooledge.org/glob?action=show&redirect=globbing) или glob — другое название для Filename Expansion.
 
 ## H
