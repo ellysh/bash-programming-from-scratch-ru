@@ -14,13 +14,23 @@
 | Прикладная область | Языки программирования |
 | --- | --- |
 | [Приложения для мобильных устройств](https://ru.wikipedia.org/wiki/Мобильное_приложение) | Java, C, C++, HTML5, JavaScript |
-| [Web-разработка](https://ru.wikipedia.org/wiki/Веб-приложение) | JavaScript, Ruby, PHP, HTML5, CSS, SQL, Python, Perl, C# |
+|  | |
+| [Web-разработка](https://ru.wikipedia.org/wiki/Веб-приложение) ([фронтэнд](https://ru.wikipedia.org/wiki/Фронтенд_и_бэкенд)) | JavaScript, PHP, HTML5, CSS, SQL |
+|  | |
+| [Web-разработка](https://ru.wikipedia.org/wiki/Веб-приложение) ([бэкэнд](https://ru.wikipedia.org/wiki/Фронтенд_и_бэкенд)) | JavaScript, PHP, Ryby, Perl, C#, Java, Go |
+|  | |
 | [Высоконагруженное серверное ПО](https://ru.wikipedia.org/wiki/Сервер_(программное_обеспечение)) | C++, Python, Ruby, SQL |
+|  | |
 | [Системное администрирование](https://ru.wikipedia.org/wiki/Системный_администратор) | Bash, Python, Perl, Ruby |
+|  | |
 | [Встраиваемые системы](https://ru.wikipedia.org/wiki/Встраиваемая_система) | C, C++, Ассемблер |
+|  | |
 | [Машинное обучение](https://ru.wikipedia.org/wiki/Машинное_обучение) и [анализ данных](https://ru.wikipedia.org/wiki/Анализ_данных) | Python, Java, C++ |
-| [Информационная безопасность](https://ru.wikipedia.org/wiki/Информационная_безопасность) | C++, Python, Bash |
+|  | |
+| [Информационная безопасность](https://ru.wikipedia.org/wiki/Информационная_безопасность) | C, C++, Python, Bash |
+|  | |
 | [Корпоративное ПО](https://ru.qwe.wiki/wiki/Enterprise_software) | Java, C#, C++, SQL |
+|  | |
 | [Компьютерные игры](https://ru.wikipedia.org/wiki/Компьютерная_игра) | C++ |
 
 Конечно этот список далеко не полный, но он может дать примерное представление о языках, используемых в каждой области.
