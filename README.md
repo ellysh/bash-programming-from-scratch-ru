@@ -8,5 +8,5 @@
 
 ## Ссылки
 
-* [Читать или скачать на Leanpub](https://leanpub.com/programming-from-scratch)
+* [Читать или загрузить с Leanpub](https://leanpub.com/programming-from-scratch)
 * [Связь с автором](mailto:petrsum@gmail.com)
