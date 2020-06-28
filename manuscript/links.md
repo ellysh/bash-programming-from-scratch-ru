@@ -70,4 +70,6 @@
 
 ### На русском языке
 
+* Книга Алексея Федосеева ["Введение в администрирование UNIX"](http://heap.altlinux.org/modules/unix_base_admin.dralex/index.html).
+
 * Книга Эрика Реймонда ["Искусство программирования в Unix"](https://ru.wikipedia.org/wiki/Философия_Unix#Реймонд:_Искусство_программирования_в_Unix).
