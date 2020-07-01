@@ -1,5 +1,13 @@
 # Список терминов
 
+## У
+
+[**Утилита**](https://ru.wikipedia.org/wiki/Утилита) ([Utility Software](https://en.wikipedia.org/wiki/Utility_software)) — вспомогательная программа для работы с ОС или оборудованием.
+
+## Ф
+
+[**Файловая система**](https://ru.wikipedia.org/wiki/Файловая_система) ([File System](https://en.wikipedia.org/wiki/File_system)) — это способ хранения и чтения информации с дисков.
+
 ## A
 
 [**Algorithm**](https://en.wikipedia.org/wiki/Algorithm) ([алгоритм](https://ru.wikipedia.org/wiki/Алгоритм)) — это конечная последовательность инструкций, понятных исполнителю, для выполнения какого-либо вычисления или решения задачи.
