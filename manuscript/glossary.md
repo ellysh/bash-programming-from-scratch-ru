@@ -4,6 +4,10 @@
 
 [**Алгоритм**](https://ru.wikipedia.org/wiki/Алгоритм) ([Algorithm](https://en.wikipedia.org/wiki/Algorithm)) — это конечная последовательность инструкций, понятных исполнителю, для выполнения какого-либо вычисления или решения задачи.
 
+## Л
+
+[**Логическое выражение**](https://ru.wikipedia.org/wiki/Логическое_выражение) ([Boolean Expression](https://en.wikipedia.org/wiki/Boolean_expression)) — конструкция языка программирования, результат вычисления которой может быть одно из двух значений: "истина" или "ложь".
+
 ## У
 
 [**Утилита**](https://ru.wikipedia.org/wiki/Утилита) ([Utility Software](https://en.wikipedia.org/wiki/Utility_software)) — вспомогательная программа для работы с ОС или оборудованием.
@@ -47,8 +51,6 @@ echo $((4+3))
 [**Bash Script**](https://www.gnu.org/software/bash/manual/html_node/Shell-Scripts.html#Shell-Scripts) (Bash-скрипт) — текстовый файл, содержащий команды интерпретатора. Скрипты исполняются Bash в неинтерактивном режиме.
 
 [**Best Practices**](http://mywiki.wooledge.org/BashGuide/Practices) (хорошая практика) — рекомендованные приемы использования языка программирования или какой-то технологии. Пример для языка Bash — заключение всех строк в двойные кавычки, чтобы избежать word splitting.
-
-[**Boolean Expression**](https://en.wikipedia.org/wiki/Boolean_expression) ([логическое выражение](https://ru.wikipedia.org/wiki/Логическое_выражение)) — конструкция языка программирования, результат вычисления которой может быть одно из двух значений: "истина" или "ложь".
 
 [**Bottleneck**](https://en.wikipedia.org/wiki/Bottleneck_(software)) (букв. бутылочное горло, узкое место) — компонент или ресурс информационной системы, который ограничивает её общую производительность или пропускную способность.
 
