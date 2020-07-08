@@ -8,6 +8,10 @@
 
 [**Логическое выражение**](https://ru.wikipedia.org/wiki/Логическое_выражение) ([Boolean Expression](https://en.wikipedia.org/wiki/Boolean_expression)) — конструкция языка программирования, результат вычисления которой может быть одно из двух значений: "истина" или "ложь".
 
+## П
+
+[**Переменная**](https://ru.wikipedia.org/wiki/Переменная_(программирование)) — это область памяти, к которой можно обращаться не только по адресу, но и по имени.
+
 ## У
 
 [**Утилита**](https://ru.wikipedia.org/wiki/Утилита) ([Utility Software](https://en.wikipedia.org/wiki/Utility_software)) — вспомогательная программа для работы с ОС или оборудованием.
@@ -292,7 +296,7 @@ set -x
 
 ## V
 
-[**Variable**](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html#Shell-Parameters) (переменная) — параметр доступный по имени. Переменные задаются пользователем или интерпретатором. Пример объявления переменной:
+[**Variable**](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html#Shell-Parameters) (переменная) — в Bash параметр доступный по имени. Переменные задаются пользователем или интерпретатором. Пример объявления переменной:
 {line-numbers: false, format: Bash}
 ```
 filename="README.txt"
