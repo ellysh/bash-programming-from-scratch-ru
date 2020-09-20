@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if ! bsdtar -cjf "$1".tar.bz2 "$@"
 then
     echo "bsdtar - FAILS" > results.txt
