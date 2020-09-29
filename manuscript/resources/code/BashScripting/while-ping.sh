@@ -6,4 +6,3 @@ do
 done
 
 echo "Сервер google.com доступен"
-
