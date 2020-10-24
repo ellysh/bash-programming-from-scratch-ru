@@ -20,34 +20,34 @@ grep "GNU" README.txt
 
 ## В
 
-**Встроенные команды** ([builtin commands](https://www.gnu.org/software/bash/manual/html_node/Shell-Builtin-Commands.html)) — команды, которые интерпретатор исполняет сам. Для их работы сторонние утилиты не нужны. Например, команда pwd.
+**Встроенные команды** ([builtin commands](https://www.gnu.org/software/bash/manual/html_node/Shell-Builtin-Commands.html)) — команды, которые интерпретатор исполняет самостоятельно. Для их выполнения не нужны сторонние утилиты. Пример встроенной команды - pwd.
 
 [**Вычислительный процесс**](https://ru.wikipedia.org/wiki/Процесс_(информатика)) ([process](https://en.wikipedia.org/wiki/Process_(computing))) — экземпляр компьютерной программы, который исполняется процессором.
 
 ## Д
 
-[**Дистрибутив Linux**](https://ru.wikipedia.org/wiki/Дистрибутив_Linux) ([**Linux distribution**](https://en.wikipedia.org/wiki/Linux_distribution)) — операционная система, основанная на ядре Linux. Она собирается из пакетов с помощью пакетного менеджера. ОС представляет собой набор готовых для работы программ и библиотек.
+[**Дистрибутив Linux**](https://ru.wikipedia.org/wiki/Дистрибутив_Linux) ([**Linux distribution**](https://en.wikipedia.org/wiki/Linux_distribution)) — операционная система, основанная на ядре Linux и наборе [приложений GNU](https://ru.wikipedia.org/wiki/Список_пакетов_GNU). ОС собирается из пакетов с помощью пакетного менеджера. Она представляет собой набор готовых для работы программ и библиотек.
 
 **Дочерний процесс** ([child process](https://en.wikipedia.org/wiki/Child_process)) — процесс, порождённый другим процессом (родительским).
 
 ## З
 
-**Зарезервированные переменные** (reserved variables) — то же самое что и Shell Variables.
+**Зарезервированные переменные** (reserved variable) — то же что и Shell Variables.
 
 ## И
 
-[**Идиома**](https://ru.wikipedia.org/wiki/Идиома_(программирование)) ([idiom](https://en.wikipedia.org/wiki/Programming_idiom)) — устойчивый способ выражения типовой конструкции в языке программирования. Идиома по сути является шаблоном для реализации какого-то алгоритма или структуры данных на данном языке. Например, цикл for для обработки списка файлов:
+[**Идиома**](https://ru.wikipedia.org/wiki/Идиома_(программирование)) ([idiom](https://en.wikipedia.org/wiki/Programming_idiom)) — способ выражения типовой конструкции в языке программирования. Идиома представляет собой шаблон реализации алгоритма или структуры данных на конкретном языке программирования. Вот идиома в Bash для обработки списка файлов в цикле for:
 {line-numbers: true, format: Bash}
 ```
 for file in ./*.txt
 do
-    cp "$file" ~/Documents
+    cp "$file" ~/Documents
 done
 ```
 
-[**Интерпретатор**](https://ru.wikipedia.org/wiki/Интерпретатор) ([interpreter](https://en.wikipedia.org/wiki/Interpreter_(computing))) — программа для непосредственного исполнения инструкций, написанных на каком-то языке программирования. При этом предварительная компиляция исходного кода обычно не требуется.
+[**Интерпретатор**](https://ru.wikipedia.org/wiki/Интерпретатор) ([interpreter](https://en.wikipedia.org/wiki/Interpreter_(computing))) — программа, которая исполняет инструкции составленные на языке программирования. Предварительная компиляция исходного кода для этого не требуется.
 
-[**Итерация**](https://ru.wikipedia.org/wiki/Итерация_(программирование)) (iteration) — однократное исполнение команд, стоящих в теле цикла.
+[**Итерация**](https://ru.wikipedia.org/wiki/Итерация_(программирование)) (iteration) — однократное исполнение команд в теле цикла.
 
 ## К
 
