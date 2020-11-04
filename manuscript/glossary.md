@@ -101,7 +101,7 @@ find / -path */doc/* -name README 1> result.txt
 set -x
 ```
 
-**Опция** ([**option**](http://linuxcommand.org/lc3_wss0120.php)) — аргумент в стандартизированной форме, который передаётся в программу. Опция начинается с тире `-` или двойного тире `--`.  Она переключает режим работы программы. Следующие друг за другом опции можно объединить в одну группу. Вот пример объединения опций `-l`, `-a` и `-h` утилиты ls:
+**Опция** ([**option**](http://linuxcommand.org/lc3_wss0120.php)) — аргумент в стандартизированной форме, который передаётся в программу. Опция начинается с тире - или двойного тире --.  Она переключает режим работы программы. Следующие друг за другом опции можно объединить в одну группу. Вот пример объединения опций `-l`, `-a` и `-h` утилиты ls:
 {line-numbers: false, format: Bash}
 ```
 ls -lah
@@ -116,7 +116,7 @@ ls -lah
 **Параметр интерпретатора** ([shell parameter](http://mywiki.wooledge.org/BashGuide/Parameters)) — именованная область памяти интерпретатора для хранения данных.
 
 **Параметр командной строки** ([command line parameter](https://stackoverflow.com/a/36495940/6562278)) — вид аргумента команды. Он передаёт информацию в программу. Параметр также может быть часть опции. Например, чтобы указать выбранный режим работы.
-Вот команда вызова утилиты `find`:
+Вот команда вызова утилиты find:
 {line-numbers: false, format: Bash}
 ```
 find ~/Documents -name README
@@ -196,7 +196,7 @@ cp "$1" ~
 
 ## Ш
 
-[**Шаблон поиска**](https://ru.wikipedia.org/wiki/Шаблон_поиска) ([glob](https://en.wikipedia.org/wiki/Glob_(programming))) — поисковый запрос. Вместе с обычными символами в него входят [символы подстановки](https://ru.wikipedia.org/wiki/Символ_подстановки): `*` и `?`. Символы подстановки соответствуют любым символам. Например, шаблон `R*M?`. Он соответствует строкам, которые начинаются с R и предпоследняя буква которых M.
+[**Шаблон поиска**](https://ru.wikipedia.org/wiki/Шаблон_поиска) ([glob](https://en.wikipedia.org/wiki/Glob_(programming))) — поисковый запрос. Вместе с обычными символами в него входят [символы подстановки](https://ru.wikipedia.org/wiki/Символ_подстановки): * и ?. Символы подстановки соответствуют любым символам. Например, шаблон `R*M?`. Он соответствует строкам, которые начинаются с R и предпоследняя буква которых M.
 
 ## Я
 
@@ -204,11 +204,14 @@ cp "$1" ~
 
 ## A
 
-[**alias**](https://www.gnu.org/software/bash/manual/html_node/Aliases.html#Aliases) (псевдоним) — встроенная команда Bash для сокращения длинных строк в режиме командного интерпретатора.
+[**alias**](https://www.gnu.org/software/bash/manual/html_node/Aliases.html#Aliases) (псевдоним) — встроенная команда Bash для сокращения длинных строк. Применяется в режиме командного интерпретатора.
 
-[**Application Programming Interface**](https://en.wikipedia.org/wiki/Application_programming_interface) или API ([интерфейс прикладного программирования](https://ru.wikipedia.org/wiki/API)) — это набор соглашений о взаимодействии компонентов информационной системы. Они описывают: какая функция будет выполнена вызываемым компонентов, какие данные должны быть переданы ему на вход, какие выходные данные будут возвращены.
- 
-[**Arithmetic Expansion**](https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html#Arithmetic-Expansion) (арифметическая подстановка) — вычисление арифметического выражения и подстановка его результата. Пример:
+[**Application Programming Interface**](https://en.wikipedia.org/wiki/Application_programming_interface) или API ([интерфейс прикладного программирования](https://ru.wikipedia.org/wiki/API)) — набор соглашений о взаимодействии компонентов информационной системы. Соглашения отвечают на следующие вопросы:
+* Какую функцию выполнит вызываемый компонент?
+* Какие данные передать на вход функции?
+* Какие данные функция возвращает?
+ 
+[**Arithmetic Expansion**](https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html#Arithmetic-Expansion) (арифметическая подстановка) — в Bash вычисление арифметического выражения и подстановка его результата. Например:
 {line-numbers: false, format: Bash}
 ```
 echo $((4+3))
@@ -223,19 +226,19 @@ echo $((4+3))
 
 ## B
 
-[**Background**](https://www.gnu.org/software/bash/manual/html_node/Job-Control-Basics.html#Job-Control-Basics) (фоновый режим) — режим исполнения задачи (job), при котором её идентификатор не относится к [группе идентификаторов](https://en.wikipedia.org/wiki/Process_group) процесса терминала и она не обрабатывает прерывания клавиатуры.
+[**Background**](https://www.gnu.org/software/bash/manual/html_node/Job-Control-Basics.html#Job-Control-Basics) (фоновый режим) — в Bash режим исполнения процесса. В этом режиме его идентификатор не относится к [группе идентификаторов](https://en.wikipedia.org/wiki/Process_group) процесса терминала. Исполняемый процесс не обрабатывает прерывания клавиатуры.
 
-[**Bash**](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (Bourne again shell) — интерпретатор командной строки, разработанный Брайан Фокс. Он заменил интерпретатор Bourne shell в Linux-дистрибутивах и некоторых проприетарных Unix системах. Является POSIX-совместимым, но при этом имеет расширения не предусмотренные стандартом.
+[**Bash**](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (Bourne again shell) — интерпретатор командной строки, разработанный Брайаном Фоксом. Bash заменил интерпретатор Bourne shell в Linux-дистрибутивах и некоторых проприетарных Unix-системах. Bash совместим с POSIX-стандартом. Некоторые его расширения стандартом не предусмотрены.
 
-**Bash-скрипт** ([**Bash script**](https://www.gnu.org/software/bash/manual/html_node/Shell-Scripts.html#Shell-Scripts)) — текстовый файл, содержащий команды интерпретатора. Скрипты исполняются Bash в неинтерактивном режиме.
+**Bash-скрипт** ([**Bash script**](https://www.gnu.org/software/bash/manual/html_node/Shell-Scripts.html#Shell-Scripts)) — текстовый файл, содержащий команды интерпретатора. Bash исполняет скрипты в не интерактивном режиме.
 
-[**Best Practices**](http://mywiki.wooledge.org/BashGuide/Practices) (хорошая практика) — рекомендованные приемы использования языка программирования или какой-то технологии. Пример для языка Bash — заключение всех строк в двойные кавычки, чтобы избежать word splitting.
+[**Best Practices**](http://mywiki.wooledge.org/BashGuide/Practices) (хорошая практика) — рекомендованные приемы использования языка программирования или какой-то технологии. Пример для языка Bash — заключение строк в двойные кавычки, чтобы избежать word splitting.
 
-[**Bottleneck**](https://en.wikipedia.org/wiki/Bottleneck_(software)) (букв. бутылочное горло, узкое место) — компонент или ресурс информационной системы, который ограничивает её общую производительность или пропускную способность.
+[**Bottleneck**](https://en.wikipedia.org/wiki/Bottleneck_(software)) (букв. бутылочное горло, узкое место) — компонент или ресурс информационной системы, который ограничивает её производительность или пропускную способность.
 
-[**Bourne shell**](https://en.wikipedia.org/wiki/Bourne_shell) — интерпретатор командной строки, разработанный Стивеном Борном. Он заменил оригинальный [интерпретатор Кена Томпсона](https://en.wikipedia.org/wiki/Thompson_shell) в [Unix версии 7](https://en.wikipedia.org/wiki/Version_7_Unix). Все его функции соответствуют [POSIX-стандарту](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html). Однако, некоторых возможности, упомянутые в стандарте, отсутствуют.
+[**Bourne shell**](https://en.wikipedia.org/wiki/Bourne_shell) — интерпретатор командной строки, разработанный Стивеном Борном. Он заменил оригинальный [интерпретатор Кена Томпсона](https://en.wikipedia.org/wiki/Thompson_shell) в [Unix версии 7](https://en.wikipedia.org/wiki/Version_7_Unix). Все функции Bourne shell соответствуют [POSIX-стандарту](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html). Но некоторые упомянутые в стандарте возможности отсутствуют.
 
-[**Brace Expansion**](http://mywiki.wooledge.org/BraceExpansion) (подстановка фигурных скобок) — генерация слов из заданных частей. Является функцией Bash и отсутствует в стандарте POSIX. Следующие две команды эквивалентны:
+[**Brace Expansion**](http://mywiki.wooledge.org/BraceExpansion) (подстановка фигурных скобок) — в Bash генерация слов из заданных частей. Эта функция отсутствует в стандарте POSIX. Например, следующие две команды эквивалентны:
 {line-numbers: true, format: Bash}
 ```
 cp test.{txt,md,log} Documents
@@ -244,9 +247,9 @@ cp test.txt test.md test.log Documents
 
 ## C
 
-[**Coding Style**](https://en.wikipedia.org/wiki/Programming_style) ([стандарт оформления кода](https://ru.wikipedia.org/wiki/Стандарт_оформления_кода)) — набор правил и соглашений для написания исходного кода программ. Его основная задача заключается в помощи нескольким программистам писать, читать и понимать общий исходный код.
+[**Coding Style**](https://en.wikipedia.org/wiki/Programming_style) ([стандарт оформления кода](https://ru.wikipedia.org/wiki/Стандарт_оформления_кода)) — набор правил и соглашений для написания исходного кода программ. Задача стандарта — помочь нескольким программистам писать, читать и понимать общий исходный код.
 
-[**Command Substitution**](https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html#Command-Substitution) (подстановка команды) — подстановка вместо команды её вывода в stdout, полученного в результате исполнения. При этом команда исполняется в subshell. Пример:
+[**Command Substitution**](https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html#Command-Substitution) (подстановка команды) — подстановка вместо команды её вывода в stdout. Вывод получается после исполнения команды в subshell. Пример:
 {line-numbers: false, format: Bash}
 ```
 echo "$(date)"
@@ -254,38 +257,38 @@ echo "$(date)"
 
 ## E
 
-[**Endianness**](https://en.wikipedia.org/wiki/Endianness) ([порядок байтов](https://ru.wikipedia.org/wiki/Порядок_байтов)) — порядок байтов при хранении чисел в памяти компьютера. Определяется свойствами центрального процессора. Сегодня наиболее распространены порядки от старшего к младшему (big-endian) и от младшего к старшему (little-endian). Некоторые CPU поддерживают оба варианта (bi-endian). Переключение между ними происходит при запуске компьютера. Пример хранения четырёхбайтового числа 0x0A0B0C0D для разных порядков:
+[**Endianness**](https://en.wikipedia.org/wiki/Endianness) ([порядок байтов](https://ru.wikipedia.org/wiki/Порядок_байтов)) — порядок байтов при хранении чисел в памяти компьютера. Он определяется свойствами центрального процессора. Сегодня используются порядки от старшего к младшему (big-endian) и от младшего к старшему (little-endian). Некоторые CPU поддерживают оба варианта (bi-endian). Переключение между ними происходит при запуске компьютера. Пример хранения четырёхбайтового числа 0x0A0B0C0D для разных порядков:
 {line-numbers: false, format: Bash}
 ```
 0A 0B 0C 0D     big-endian
 0D 0C 0B 0A     little-endian
 ```
 
-[**Error-prone**](https://en.wiktionary.org/wiki/error-prone) (подверженный ошибкам) — обозначение приёмов программирования, которые работают корректно в частных случаях, но приводят к ошибкам при определённых входных данных или условиях. Например, обработка вывода утилиты `ls` в конвейере:
+[**Error-prone**](https://en.wiktionary.org/wiki/error-prone) (подверженный ошибкам) — обозначение приёмов программирования и решений. Эти решения работают корректно в частных случаях, но приводят к ошибкам при определённых входных данных или условиях. Пример error-prone решения — обработка вывода утилиты ls в конвейере:
 {line-numbers: false, format: Bash}
 ```
 ls | grep "test"
 ```
 
-[**Exit Status**](https://www.gnu.org/software/bash/manual/html_node/Exit-Status.html#Exit-Status) ([код возврата](https://ru.wikipedia.org/wiki/Код_возврата)) — целочисленное значение от 0 до 255, которое выполненная команда возвращает интерпретатору в момент своего завершения. Код возврата равный 0 означает успешное выполнение команды. Все остальные указывают на ошибку.
+[**Exit Status**](https://www.gnu.org/software/bash/manual/html_node/Exit-Status.html#Exit-Status) ([код возврата](https://ru.wikipedia.org/wiki/Код_возврата)) — в Bash целочисленное значение от 0 до 255, которое команда возвращает интерпретатору при завершении. Код возврата 0 означает успешное выполнение команды. Все остальные коды указывают на ошибку.
 
 ## F
 
-[**Filename Expansion**](https://www.gnu.org/software/bash/manual/html_node/Filename-Expansion.html#Filename-Expansion) (подстановка имён файлов) — подстановка имён файлов вместо шаблонов, содержащих символы `?`, `*` и `[`. Пример:
+[**Filename Expansion**](https://www.gnu.org/software/bash/manual/html_node/Filename-Expansion.html#Filename-Expansion) (подстановка имён файлов) — в Bash подстановка имён файлов вместо шаблонов, содержащих символы ?, * и [. Пример:
 {line-numbers: false, format: Bash}
 ```
 rm -rf *
 ```
 
-[**Foreground**](https://www.gnu.org/software/bash/manual/html_node/Job-Control-Basics.html#Job-Control-Basics) (активный режим) — режим исполнения задачи (job) в текущем терминале, при котором её идентификатор относится к [группе идентификаторов](https://en.wikipedia.org/wiki/Process_group) процесса терминала и она обрабатывает все прерывания клавиатуры.
+[**Foreground**](https://www.gnu.org/software/bash/manual/html_node/Job-Control-Basics.html#Job-Control-Basics) (активный режим) — в Bash режим исполнения процесса. При этом его идентификатор относится к [группе идентификаторов](https://en.wikipedia.org/wiki/Process_group) процесса терминала. Исполняемый процесс обрабатывает прерывания клавиатуры.
 
 ## G
 
-[**Globbing**](https://mywiki.wooledge.org/glob?action=show&redirect=globbing) или glob — другое название для Filename Expansion.
+[**Globbing**](https://mywiki.wooledge.org/glob?action=show&redirect=globbing) или glob — в Bash другое название для filename expansion.
 
 ## I
 
-[**Input Field Separator**](https://mywiki.wooledge.org/IFS) или IFS (разделитель поля ввода) — список следующих друг за другом символов, которые используются в качестве разделителей при обработке вводимых строк (в том числе и для word splitting). По умолчанию это символы пробела, табуляции и перевода строки.
+[**Input Field Separator**](https://mywiki.wooledge.org/IFS) или IFS (разделитель поля ввода) — список следующих друг за другом символов. Bash использует их как разделители при обработке вводимых строк (в том числе и для word splitting). По умолчанию это символы пробела, табуляции и перевода строки.
 
 ## L
 
@@ -293,20 +296,20 @@ rm -rf *
 
 ## P
 
-[**Parameter Expansion**](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html#Shell-Parameter-Expansion) (подстановка параметров или подстановка переменных) — подстановка вместо имени переменной или параметра его значения. Примеры:
+[**Parameter Expansion**](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html#Shell-Parameter-Expansion) (подстановка параметров или подстановка переменных) — в Bash подстановка вместо имени переменной или параметра его значения. Примеры:
 {line-numbers: false, format: Bash}
 ```
 echo "$PATH"
 echo "${var:-empty}"
 ```
 
-[**Portable Operating System Interface**](https://ru.wikipedia.org/wiki/POSIX) или POSIX (переносимый интерфейс операционных систем) — набор стандартов, которые описывают интерфейсы взаимодействия прикладных программ с ОС, командный интерпретатор и интерфейсы утилит. Цель создания POSIX — обеспечить совместимость ОС семейства Unix, и облегчить перенос прикладных программ между ними.
+[**Portable Operating System Interface**](https://ru.wikipedia.org/wiki/POSIX) или POSIX (переносимый интерфейс операционных систем) — набор стандартов. Они описывают интерфейсы взаимодействия прикладных программ с ОС, командный интерпретатор и интерфейсы утилит. POSIX поддерживает совместимость ОС семейства Unix. Благодаря этому, между ними легче переносить прикладные программы.
 
-**POSIX-окружение** (POSIX environment) — программная среда полностью или частично совместимая со стандартом POSIX. Полная совместимость обеспечивается ядром ОС, командной оболочкой и файловой системой. Для частичной совместимости может быть достаточно уровня абстракции наподобие [Cygwin](https://ru.wikipedia.org/wiki/Cygwin).
+**POSIX-окружение** (POSIX environment) — программная среда полностью или частично совместимая со стандартом POSIX. Для полной совместимости нужна поддержка ядром ОС, командной оболочкой и файловой системой. Для частичной совместимости достаточно окружения наподобие [Cygwin](https://ru.wikipedia.org/wiki/Cygwin).
 
-[**POSIX Shell**](https://www.grymoire.com/Unix/Sh.html) — стандарт, описывающий минимально достаточный набор функций интерпретатора командной строки для POSIX систем. Если интерпретатор имеет все эти функции, он считается POSIX-совместимым. При этом стандарт никак не ограничивает дополнительные возможности и расширения. За основу стандарта была взята реализация ksh88 [Korn shell](https://en.wikipedia.org/wiki/KornShell). Этот интерпретатор появился позже, чем Bourne shell. Поэтому некоторые из функций, указанных в стандарте POSIX, отсутствуют в Bourne shell.
+[**POSIX Shell**](https://www.grymoire.com/Unix/Sh.html) — стандарт для POSIX-систем с описанием минимального набора функций командного интерпретатора. Если интерпретатор имеет эти функции, он считается POSIX-совместимым. При этом стандарт никак не ограничивает дополнительные возможности и расширения. В основу стандарта легла реализация ksh88 [Korn shell](https://en.wikipedia.org/wiki/KornShell). Этот интерпретатор появился позже, чем Bourne shell. Поэтому некоторые функции стандарта POSIX отсутствуют в Bourne shell.
 
-[**Process Substitution**](https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html#Process-Substitution) (подстановка процесса) — аналог подстановки команды. В отличие от неё исполнение происходит асинхронно, а ввод и вывод команды привязаны к файлу. Содержимое этих файлов Bash перенаправляет родительскому процессу. Пример:
+[**Process Substitution**](https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html#Process-Substitution) (подстановка процесса) — в Bash аналог подстановки команды. В отличие от неё исполнение происходит асинхронно. При этом ввод и вывод команды привязаны к файлам. Содержимое этих файлов Bash перенаправляет родительскому процессу. Пример:
 {line-numbers: false, format: Bash}
 ```
 diff <(sort file1.txt) <(sort file2.txt)
@@ -314,13 +317,13 @@ diff <(sort file1.txt) <(sort file2.txt)
 
 ## Q
 
-[**Quote Removal**](https://www.gnu.org/software/bash/manual/html_node/Quote-Removal.html#Quote-Removal) (удаление кавычек) — последняя из подстановок Bash. Заключается в удалении всех неэкранированных символов `\`, `'` и `"`, которые не были получены в результате одной из предыдущих подстановок.
+[**Quote Removal**](https://www.gnu.org/software/bash/manual/html_node/Quote-Removal.html#Quote-Removal) (удаление кавычек) — подстановка, которую Bash выполняет последней. Она удаляет неэкранированные символы \, ' и ", которые не были получены в результате предыдущих подстановок.
 
 ## S
 
 [**Short-circuit evaluation**](https://en.wikipedia.org/wiki/Short-circuit_evaluation) (короткое замыкание) — вычисление только тех операндов логического оператора, которые достаточны для вывода значения всего выражения.
 
-[**Subshell**](http://mywiki.wooledge.org/SubShell) (подоболочка) — способ группирования команд, при котором они исполняются в интерпретаторе, запущенном дочернем процессе. Переменные, определённые в дочернем процессе не доступны в родительском. Пример выполнения команд subshell:
+[**Subshell**](http://mywiki.wooledge.org/SubShell) (подоболочка) — способ группирования команд. Команды исполняются в интерпретаторе, запущенном в дочернем процессе. Переменные, определённые в дочернем процессе, не доступны в родительском. Пример выполнения команд в subshell:
 {line-numbers: false, format: Bash}
 ```
 (ps aux | grep "bash")
@@ -328,7 +331,7 @@ diff <(sort file1.txt) <(sort file2.txt)
 
 ## T
 
-[**Tilde Expansion**](https://www.gnu.org/software/bash/manual/html_node/Tilde-Expansion.html#Tilde-Expansion) (подстановка тильды) — подстановка вместо символа тильда `~` домашнего каталога пользователя из переменной интерпретатора с именем `HOME`.
+[**Tilde Expansion**](https://www.gnu.org/software/bash/manual/html_node/Tilde-Expansion.html#Tilde-Expansion) (подстановка тильды) — в Bash подстановка вместо символа тильда ~ домашнего каталога пользователя. Путь до домашнего каталога читается из переменной `HOME`.
 
 ## U
 
@@ -336,7 +339,7 @@ diff <(sort file1.txt) <(sort file2.txt)
 
 ## W
 
-[**Word Splitting**](https://www.gnu.org/software/bash/manual/html_node/Word-Splitting.html#Word-Splitting) (разделение слов) — разделение аргументов командной строки на слова и передача их в качестве отдельных параметров. В качестве разделителя используются символы, перечисленные в переменной `$IFS`. Аргументы, заключённые в кавычки не обрабатываются. Пример:
+[**Word Splitting**](https://www.gnu.org/software/bash/manual/html_node/Word-Splitting.html#Word-Splitting) (разделение слов) — в Bash разделение аргументов командной строки на слова и передача их отдельными параметрами. Символы из переменной `$IFS` используются как разделители. Аргументы, заключённые в кавычки, не обрабатываются. Пример:
 {line-numbers: false, format: Bash}
 ```
 cp file1.txt file2.txt "my file.txt" ~
