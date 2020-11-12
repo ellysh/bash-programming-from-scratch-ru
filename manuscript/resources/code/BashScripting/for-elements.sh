@@ -4,5 +4,5 @@ array=(Alice Bob Eve Mallory)
 
 for element in "${array[@]:0:2}"
 do
-    echo "$element"
+  echo "$element"
 done

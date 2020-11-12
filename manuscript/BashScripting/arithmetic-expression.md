@@ -1253,9 +1253,9 @@ var=1
 ```
 if ((var < 10))
 then
-    ((result = 0))
+  ((result = 0))
 else
-    ((result = var))
+  ((result = var))
 fi
 ```
 
@@ -1280,9 +1280,9 @@ fi
 ```
 if УСЛОВИЕ
 then
-    ДЕЙСТВИЕ 1
+  ДЕЙСТВИЕ 1
 else
-    ДЕЙСТВИЕ 2
+  ДЕЙСТВИЕ 2
 fi
 ```
 

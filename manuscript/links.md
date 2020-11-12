@@ -26,23 +26,27 @@
 
 * [История ОС от Apple](http://www.kernelthread.com/publications/appleoshistory).
 
+* Статья ["Статическая и динамическая типизация"](https://www.destroyallsoftware.com/compendium/types?share_key=baf6b67369843fa2)
+
 ## Bash
 
 ### На русском языке
 
-* Перевод на русский язык книги Machtelt Garrels ["Руководство по Bash для начинающих"](http://rus-linux.net/nlib.php?name=/MyLDP/BOOKS/Bash-Guide-1.12-ru/bash-guide-index.html).
+* Перевод книги Machtelt Garrels ["Руководство по Bash для начинающих"](http://rus-linux.net/nlib.php?name=/MyLDP/BOOKS/Bash-Guide-1.12-ru/bash-guide-index.html).
 
-* Перевод на русский язык книги Mendel Cooper ["Advanced Bash-Scripting Guide"](https://www.opennet.ru/docs/RUS/bash_scripting_guide) ("Искусство программирования на языке сценариев командной оболочки").
+* Перевод книги Mendel Cooper ["Advanced Bash-Scripting Guide"](https://www.opennet.ru/docs/RUS/bash_scripting_guide) ("Искусство программирования на языке сценариев командной оболочки").
 
 * [Шпаргалка по Bash командам](https://tproger.ru/translations/bash-cheatsheet).
 
-* [Подводные камни Bash](https://habr.com/ru/company/mailru/blog/311762/) (перевод).
+* [Подводные камни Bash](https://habr.com/ru/company/mailru/blog/311762/).
 
 ### На английском языке
 
 * Книга Machtelt Garrels ["Руководство по Bash для начинающих"](http://tille.garrels.be/training/bash)
 
 * Книга Mendel Cooper ["Advanced Bash-Scripting Guide"](http://tldp.org/LDP/abs/html)
+
+* [Шпаргалка по Bash командам](https://github.com/NisreenFarhoud/Bash-Cheatsheet)
 
 * [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html#SEC_Contents)
 
@@ -52,9 +56,9 @@
 
 * [Подводные камни Bash](http://mywiki.wooledge.org/BashPitfalls).
 
-* [Useless Use of Cat Award](http://www.smallo.ruhr.de/award.html) — примеры неправильного использования GNU утилит.
+* Примеры неправильного использования GNU-утилит [Useless Use of Cat Award](http://www.smallo.ruhr.de/award.html).
 
-* [Регулярные выражения в `grep`](https://www.cyberciti.biz/faq/grep-regular-expressions).
+* [Регулярные выражения в утилите grep](https://www.cyberciti.biz/faq/grep-regular-expressions).
 
 * [Best practices по использованию Bash](http://mywiki.wooledge.org/BashGuide/Practices).
 
@@ -62,7 +66,7 @@
 
 * [Bash coding style от Google](https://google.github.io/styleguide/shellguide.html).
 
-* [Сервис для детального анализа введённых Bash-команд](https://explainshell.com/#).
+* [Сервис для анализа Bash-команд](https://explainshell.com/#).
 
 * [Инструкция по локализации Bash-скриптов](https://mywiki.wooledge.org/BashFAQ/098?highlight=(Localization))
 
