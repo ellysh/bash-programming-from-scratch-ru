@@ -320,12 +320,10 @@ find . -maxdepth 1 -type f -name "*.txt" -exec "$1" -t ~ {} \;
 ./txt-copy.sh
 ```
 
-Чтобы это сработало, добавим в подстановку параметра `$1` значение по умолчанию. Получим такой скрипт:
-{line-numbers: true, format: Bash}
-```
-#!/bin/bash
-find . -maxdepth 1 -type f -name "*.txt" -exec "${1:-cp}" -t ~ {} \;
-```
+Чтобы это сработало, добавим в подстановку параметра `$1` значение по умолчанию. Получим скрипт `find-txt.sh` из листинга 5-1.
+
+{caption: "Листинг 5-1. Скрипт для поиска TXT-файлов", line-numbers: true, format: Bash}
+![`find-txt.sh`](code/Answers/find-txt.sh)
 
 ##### Упражнение 3-4. Оператор if
 
@@ -342,10 +340,10 @@ find . -maxdepth 1 -type f -name "*.txt" -exec "${1:-cp}" -t ~ {} \;
 ```
 if grep -RlZ "123" target | xargs -0 cp -t .
 then
-    echo "cp - OK"
-    grep -RLZ "123" target | xargs -0 rm && echo "rm - OK" || echo "rm - FAILS"
+  echo "cp - OK"
+  grep -RLZ "123" target | xargs -0 rm && echo "rm - OK" || echo "rm - FAILS"
 else
-    echo "cp - FAILS"
+  echo "cp - FAILS"
 fi
 ```
 
@@ -354,38 +352,22 @@ fi
 ```
 if grep -RlZ "123" target | xargs -0 cp -t .
 then
-    echo "cp - OK"
-    if grep -RLZ "123" target | xargs -0 rm
-    then
-        echo "rm - OK"
-    else
-        echo "rm - FAILS"
-    fi
+  echo "cp - OK"
+  if grep -RLZ "123" target | xargs -0 rm
+  then
+    echo "rm - OK"
+  else
+    echo "rm - FAILS"
+  fi
 else
-    echo "cp - FAILS"
-fi
-```
-
-Чтобы избежать вложенных конструкций if-else, применим технику раннего возврата. Также добавим в начале скрипта шебанг. Получится следующее:
-{line-numbers: true, format: Bash}
-```
-#!/bin/bash
-
-if ! grep -RlZ "123" target | xargs -0 cp -t .
-then
   echo "cp - FAILS"
-  exit 1
-fi
-
-echo "cp - OK"
-
-if grep -RLZ "123" target | xargs -0 rm
-then
-  echo "rm - OK"
-else
-  echo "rm - FAILS"
 fi
 ```
+
+Чтобы избежать вложенных конструкций if-else, применим технику раннего возврата. Также добавим в начале скрипта шебанг. Листинг 5-2 демонстрирует результат.
+
+{caption: "Листинг 5-2. Скрипт для поиска стоки в файлах", line-numbers: true, format: Bash}
+![`search-copy-remove.sh`](code/Answers/search-copy-remove.sh)
 
 ##### Упражнение 3-5. Оператор [[
 
@@ -440,17 +422,11 @@ find . -type f -exec test ! -e ../dir2/{} \; -a -exec echo {} \;
 
 Добавим аналогичный вызов find для проверки файлов каталога `dir2` в каталоге `dir1`.
 
-Полный скрипт сравнения каталогов выглядит так:
-{line-numbers: true, format: Bash}
-```
-#!/bin/bash
 
-cd dir1
-find . -type f -exec test ! -e ../dir2/{} \; -a -exec echo {} \;
+Листинг 5-3 демонстрирует полный скрипт `dir-diff.sh` для сравнения каталогов.
 
-cd ../dir2
-find . -type f -exec test ! -e ../dir1/{} \; -a -exec echo {} \;
-```
+{caption: "Листинг 5-3. Скрипт для сравнения каталогов", line-numbers: true, format: Bash}
+![`dir-diff.sh`](code/Answers/dir-diff.sh)
 
 I> Мы написали скрипт сравнения каталогов для учебных целей. Не используйте его для реальных задач. Предпочитайте специальную GNU-утилиту diff.
 
@@ -778,7 +754,7 @@ do
   else
     echo "Вы отгадали число"
     exit 0
-  fi  
+  fi
 done
 
 echo "Вы не отгадали число"
