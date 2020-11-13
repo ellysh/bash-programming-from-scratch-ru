@@ -71,7 +71,7 @@ du ~/Documents
 ```
 while УСЛОВИЕ
 do
-    ДЕЙСТВИЕ
+  ДЕЙСТВИЕ
 done
 ```
 
@@ -128,7 +128,7 @@ ping -c 1 -W 1 google.com
 ```
 while ! ping -c 1 -W 1 google.com &> /dev/null
 do
-    sleep 1
+  sleep 1
 done
 ```
 
@@ -153,7 +153,7 @@ I> Для параметра утилиты sleep можно указать су
 ```
 until УСЛОВИЕ
 do
-    ДЕЙСТВИЕ
+  ДЕЙСТВИЕ
 done
 ```
 
@@ -183,7 +183,7 @@ until УСЛОВИЕ; do ДЕЙСТВИЕ; done
 ```
 while true
 do
-    sleep 1
+  sleep 1
 done
 ```
 
@@ -196,7 +196,7 @@ I> В большинстве языков программирования true 
 ```
 while :
 do
-    sleep 1
+  sleep 1
 done
 ```
 
@@ -387,7 +387,7 @@ done < "contacts.txt"
 ```
 for ПЕРЕМЕННАЯ in СТРОКА
 do
-    ДЕЙСТВИЕ
+  ДЕЙСТВИЕ
 done
 ```
 
@@ -487,7 +487,7 @@ array=(Alice Bob Eve Mallory)
 
 for i in 0 1 2
 do
-    echo "${array[i]}"
+  echo "${array[i]}"
 done
 ```
 
@@ -500,7 +500,7 @@ array=(Alice Bob Eve Mallory)
 
 for i in {0..2}
 do
-    echo "${array[i]}"
+  echo "${array[i]}"
 done
 ```
 
@@ -677,7 +677,7 @@ for i in {1..$1}
 ```
 for (( ВЫРАЖЕНИЕ_1; ВЫРАЖЕНИЕ_2; ВЫРАЖЕНИЕ_3 ))
 do
-    ДЕЙСТВИЕ
+  ДЕЙСТВИЕ
 done
 ```
 

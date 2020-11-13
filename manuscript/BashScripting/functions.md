@@ -61,7 +61,7 @@ echo "Произошла ошибка N" >> debug.log
 ```
 ИМЯ_ФУНКЦИИ()
 {
-    ДЕЙСТВИЕ
+  ДЕЙСТВИЕ
 }
 ```
 
@@ -149,7 +149,7 @@ unset -f mem
 ```
 mem()
 {
-    cat /proc/meminfo
+  cat /proc/meminfo
 }
 ```
 
@@ -286,7 +286,7 @@ find_func() { find $1 -type f; }
 ```
 print_error()
 {
-    >&2 echo "Произошла ошибка: $@"
+  >&2 echo "Произошла ошибка: $@"
 }
 ```
 
@@ -301,7 +301,7 @@ print_error "файл readme.txt не найден"
 ```
 print_error()
 {
-    echo "Произошла ошибка: $@" >> debug.log
+  echo "Произошла ошибка: $@" >> debug.log
 }
 ```
 
@@ -557,8 +557,8 @@ code_to_error()
 ```
 check_license()
 {
-    local filename="$1"
-    grep "General Public License" "$filename"
+  local filename="$1"
+  grep "General Public License" "$filename"
 }
 ```
 
@@ -583,15 +583,15 @@ filename="$1"
 
 check_license()
 {
-    local filename="$filename"
-    grep "General Public License" "$filename"
+  local filename="$filename"
+  grep "General Public License" "$filename"
 }
 ```
 
 Здесь локальная переменная `filename` инициализируется значением глобальной переменной с тем же именем. Причина в том, что подстановка переменных выполняется до операции присваивания. То есть в момент присваивания подставляется значение параметра скрипта `$1`. Например, если в скрипт передать имя файла `README`, то присваивание выглядит так:
 {line-numbers: false, format: Bash}
 ```
-    local filename="README"
+  local filename="README"
 ```
 
 В Bash начиная с версии 4.2 изменилось ограничение области видимости массивов. Если объявить индексируемый и ассоциативный массив в функции, он по умолчанию попадёт в локальную область видимости. Чтобы объявить массив глобальным, используйте опцию `-g` команды declare.
@@ -601,8 +601,8 @@ check_license()
 ```
 check_license()
 {
-    declare files=(Documents/*.txt)
-    grep "General Public License" "$files"
+  declare files=(Documents/*.txt)
+  grep "General Public License" "$files"
 }
 ```
 
@@ -611,8 +611,8 @@ check_license()
 ```
 check_license()
 {
-    declare -g files=(Documents/*.txt)
-    grep "General Public License" "$files"
+  declare -g files=(Documents/*.txt)
+  grep "General Public License" "$files"
 }
 ```
 
@@ -631,8 +631,8 @@ check_license()
 ```
 function check_license()
 {
-    declare files=(Documents/*.txt)
-    grep "General Public License" "$files"
+  declare files=(Documents/*.txt)
+  grep "General Public License" "$files"
 }
 ```
 
@@ -645,8 +645,8 @@ alias check_license="grep 'General Public License'"
 
 function check_license()
 {
-    declare files=(Documents/*.txt)
-    grep "General Public License" "$files"
+  declare files=(Documents/*.txt)
+  grep "General Public License" "$files"
 }
 ```
 
