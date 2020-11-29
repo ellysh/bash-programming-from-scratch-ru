@@ -274,7 +274,7 @@ cp /usr/share/doc/bash/README ~ && echo "cp - OK" > ~/result.log \
 && rm ~/README && echo "rm - OK" >> ~/result.log
 ```
 
-## Разработка Bash скриптов
+## Разработка Bash-скриптов
 
 ##### Упражнение 3-2. Полная форма подстановки параметров
 
