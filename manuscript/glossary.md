@@ -67,7 +67,7 @@ done
 var="~/Documents"
 ```
 
-[**Логическое выражение**](https://ru.wikipedia.org/wiki/Логическое_выражение) ([boolean expression](https://en.wikipedia.org/wiki/Boolean_expression)) — конструкция языка программирования. В результате её вычисления получается либо значение "истина", либо "ложь".
+[**Логическое выражение**](https://ru.wikipedia.org/wiki/Логическое_выражение) ([Boolean expression](https://en.wikipedia.org/wiki/Boolean_expression)) — конструкция языка программирования. В результате её вычисления получается либо значение "истина", либо "ложь".
 
 [**Логический оператор**](https://ru.wikipedia.org/wiki/Логическая_операция) ([logical operator](https://en.wikipedia.org/wiki/Logical_connective)) — операция над логическими выражениями. Она комбинирует их в одно выражение. Результат операции зависит от значений исходных выражений.
 
