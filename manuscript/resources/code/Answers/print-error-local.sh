@@ -16,10 +16,10 @@ code_to_error_en()
 {
   case $1 in
     1)
-      echo "The following file was not found:"
+      echo "File not found:"
       ;;
     2)
-      echo "You do not have permissions to read the following file:"
+      echo "Permission to read the file denied:"
       ;;
   esac
 }

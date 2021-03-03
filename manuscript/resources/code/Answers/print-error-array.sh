@@ -7,8 +7,8 @@ print_error()
   messages["ru_RU",1]="Не найден файл"
   messages["ru_RU",2]="Нет прав для чтения файла"
 
-  messages["en_US",1]="The following file was not found:"
-  messages["en_US",2]="You do not have permissions to read the following file:"
+  messages["en_US",1]="File not found:"
+  messages["en_US",2]="Permission to read the file denied:"
 
   echo "${messages[$LANGUAGE,$1]} $2" >> debug.log
 }
