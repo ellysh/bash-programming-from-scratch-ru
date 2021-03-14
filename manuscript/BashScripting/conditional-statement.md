@@ -503,7 +503,7 @@ I> Выбирая формат опций и параметров скрипто
 {line-numbers: true, format: Bash}
 ```
 ./archiving-case.sh -a
-./archiving-case.sh -b
+./archiving-case.sh -c
 ./archiving-case.sh -x
 ```
 

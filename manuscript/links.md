@@ -24,7 +24,7 @@
 
 * [Цикл статей по истории электронных компьютеров](https://technicshistory.com/2017/08/29/the-electronic-computers-part-1-prologue)
 
-* [История ОС от Apple](http://www.kernelthread.com/publications/appleoshistory).
+* [История ОС от Apple](http://web.archive.org/web/20180702193510/http://kernelthread.com/publications/appleoshistory/).
 
 * Статья ["Статическая и динамическая типизация"](https://www.destroyallsoftware.com/compendium/types?share_key=baf6b67369843fa2)
 
@@ -42,7 +42,7 @@
 
 ### На английском языке
 
-* Книга Machtelt Garrels ["Руководство по Bash для начинающих"](http://tille.garrels.be/training/bash)
+* Книга Machtelt Garrels ["Руководство по Bash для начинающих"](https://tldp.org/LDP/Bash-Beginners-Guide/html/)
 
 * Книга Mendel Cooper ["Advanced Bash-Scripting Guide"](http://tldp.org/LDP/abs/html)
 
@@ -68,7 +68,7 @@
 
 * [Сервис для анализа Bash-команд](https://explainshell.com/#).
 
-* [Инструкция по локализации Bash-скриптов](https://mywiki.wooledge.org/BashFAQ/098?highlight=(Localization))
+* [Инструкция по локализации Bash-скриптов](https://mywiki.wooledge.org/BashFAQ/098)
 
 ## Unix-окружение
 
