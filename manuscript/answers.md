@@ -514,6 +514,8 @@ q = -5437 / -17 ~ 319.8235 ~ 319
 r = -5437 - (-17) * 319 = -14
 ```
 
+Проверьте ваши расчёты этим [Python скриптом](https://github.com/ellysh/bash-programming-from-scratch-ru/blob/master/manuscript/resources/code/Answers/remainer-modulo.py).
+
 ##### Упражнение 3-9. Побитовое отрицание
 
 Сначала вычислим побитовое отрицание для беззнаковых двухбайтовых целых.
