@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while :
+while true
 do
   clear
   df -hT
