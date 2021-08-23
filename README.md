@@ -17,4 +17,5 @@
 ## Ссылки
 
 * [Читать или загрузить с Leanpub](https://leanpub.com/programming-from-scratch)
+* [Перевод книги на английский](https://leanpub.com/bash-programming-from-scratch)
 * [Связь с автором](mailto:petrsum@gmail.com)
