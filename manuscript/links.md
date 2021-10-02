@@ -36,7 +36,7 @@
 
 * Перевод книги Mendel Cooper ["Advanced Bash-Scripting Guide"](https://www.opennet.ru/docs/RUS/bash_scripting_guide) ("Искусство программирования на языке сценариев командной оболочки").
 
-* [Шпаргалка по Bash командам](https://tproger.ru/translations/bash-cheatsheet).
+* [Шпаргалка по Bash-командам](https://tproger.ru/translations/bash-cheatsheet).
 
 * [Подводные камни Bash](https://habr.com/ru/company/mailru/blog/311762/).
 
@@ -46,7 +46,7 @@
 
 * Книга Mendel Cooper ["Advanced Bash-Scripting Guide"](http://tldp.org/LDP/abs/html)
 
-* [Шпаргалка по Bash командам](https://github.com/NisreenFarhoud/Bash-Cheatsheet)
+* [Шпаргалка по Bash-командам](https://github.com/NisreenFarhoud/Bash-Cheatsheet)
 
 * [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html#SEC_Contents)
 
