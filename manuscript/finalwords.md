@@ -49,11 +49,11 @@ Bash — это [**предметно-ориентированный**](https://
 |  | |
 | [Web-разработка](https://ru.wikipedia.org/wiki/Веб-приложение) ([бэкэнд](https://ru.wikipedia.org/wiki/Фронтенд_и_бэкенд)) | JavaScript, Python, Ryby, Perl, C#, Java, Go |
 |  | |
-| [Высоконагруженное серверное ПО](https://ru.wikipedia.org/wiki/Сервер_(программное_обеспечение)) | C++, Python, Ruby, SQL |
+| [Высоконагруженное серверное ПО](https://ru.wikipedia.org/wiki/Сервер_(программное_обеспечение)) | C++, Rust, Python, Ruby, SQL |
 |  | |
 | [Системное администрирование](https://ru.wikipedia.org/wiki/Системный_администратор) | Bash, Python, Perl, Ruby |
 |  | |
-| [Встраиваемые системы](https://ru.wikipedia.org/wiki/Встраиваемая_система) | C, C++, Ассемблер |
+| [Встраиваемые системы](https://ru.wikipedia.org/wiki/Встраиваемая_система) | C, C++, Rust, Ассемблер |
 |  | |
 | [Машинное обучение](https://ru.wikipedia.org/wiki/Машинное_обучение) и [анализ данных](https://ru.wikipedia.org/wiki/Анализ_данных) | Python, Java, C++ |
 |  | |
